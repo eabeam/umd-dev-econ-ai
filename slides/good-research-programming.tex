@@ -15,7 +15,7 @@
 \usepackage{tabularx}
 \usepackage{colortbl}
 \usepackage{tikz}
-\usetikzlibrary{positioning, calc, arrows.meta, shapes.geometric, fit, shadows}
+\usetikzlibrary{positioning, calc, arrows.meta, shapes.geometric, fit, shadows, decorations.pathmorphing}
 \usepackage[most]{tcolorbox}
 \usepackage{fontawesome5}
 \usepackage{hyperref}
@@ -101,19 +101,26 @@
   },
 }
 
-% Pop-out aside: a little conversation box in the bottom-right corner,
+% Pop-out aside: a hand-drawn conversation box in the bottom-right corner,
 % for the parenthetical remarks that don't belong in the body.
-% Usage: \aside{text}  or  \aside[5cm]{longer text}
+% Wobbly border = two mismatched random-steps strokes (seeded, so it
+% compiles identically every time). Usage: \aside{text} or \aside[5cm]{text}
 \newcommand{\aside}[2][4.2cm]{%
 \begin{tikzpicture}[remember picture, overlay]
-  \node[anchor=south east, xshift=-1.5cm, yshift=0.85cm, rotate=1.5,
-        draw=UVMGold, fill=LightGold, rounded corners=4pt, line width=0.8pt,
+  \pgfmathsetseed{4242}%
+  \node[anchor=south east, xshift=-1.5cm, yshift=0.85cm,
+        fill=LightGold, rounded corners=9pt,
         text=DeepCharcoal, font=\footnotesize\itshape, align=left,
-        text width=#1, inner sep=7pt,
-        drop shadow={shadow xshift=1.5pt, shadow yshift=-1.5pt, opacity=0.25}]
+        text width=#1, inner sep=9pt]
     (asidebox) at (current page.south east) {#2};
+  \draw[DeepCharcoal, line width=1.0pt, rounded corners=11pt,
+        decorate, decoration={random steps, segment length=8pt, amplitude=2.0pt}]
+    ($(asidebox.south west)+(-2pt,-2pt)$) rectangle ($(asidebox.north east)+(2pt,2pt)$);
+  \draw[DeepCharcoal!70, line width=0.6pt, rounded corners=10pt,
+        decorate, decoration={random steps, segment length=12pt, amplitude=3.0pt}]
+    ($(asidebox.south west)+(-4pt,-1pt)$) rectangle ($(asidebox.north east)+(1.5pt,4pt)$);
   \node[anchor=south west, text=UVMGold, font=\small]
-    at ([xshift=2pt, yshift=-2pt]asidebox.north west) {\faCommentDots};
+    at ([xshift=3pt, yshift=1pt]asidebox.north west) {\faCommentDots};
 \end{tikzpicture}}
 
 % Section divider helper
@@ -362,7 +369,7 @@ gen foodexp\_pc = foodexp\_hh /\\
 \begin{itemize}
   \item Names carry meaning; comments say \textbf{why}, not what
   \item The test: open a file cold --- can you tell what it does in thirty seconds?
-  \item Agents inherit your standards. Messy repo in, messy code out.
+  \item Agents inherit your standards --- messy in, messy out
 \end{itemize}
 
 \aside{November-you has no memory of August-you. None.}
@@ -441,13 +448,11 @@ git log\hspace{3.9em}{\color{CoolGray}see the story so far}
 
 \vspace{0.3cm}
 
-\begin{tcolorbox}[accentbox]
-\centering
-The rhythm: \textbf{checkpoint $\to$ delegate $\to$ read the diff $\to$ keep or discard.}\\[3pt]
-You are never stuck with what the agent did.
+\begin{tcolorbox}[accentbox, width=0.66\textwidth]
+The rhythm: \textbf{checkpoint $\to$ delegate $\to$ read the diff $\to$ keep or discard.} You are never stuck with what the agent did.
 \end{tcolorbox}
 
-\aside{Discarding isn't defeat --- it's cheaper than repair.}
+\aside[3.6cm]{Discarding isn't defeat --- it's cheaper than repair.}
 
 \end{frame}
 
