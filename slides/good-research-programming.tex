@@ -105,20 +105,25 @@
 % for the parenthetical remarks that don't belong in the body.
 % Wobbly border = two mismatched random-steps strokes (seeded, so it
 % compiles identically every time). Usage: \aside{text} or \aside[5cm]{text}
+% Text uses the Augie handwriting font when installed (tlmgr install augie);
+% falls back to italic otherwise.
+\IfFileExists{t1augie.fd}%
+  {\newcommand{\asidefont}{\footnotesize\fontfamily{augie}\selectfont}}%
+  {\newcommand{\asidefont}{\footnotesize\itshape}}
 \newcommand{\aside}[2][4.2cm]{%
 \begin{tikzpicture}[remember picture, overlay]
   \pgfmathsetseed{4242}%
   \node[anchor=south east, xshift=-1.5cm, yshift=0.85cm,
         fill=LightGold, rounded corners=9pt,
-        text=DeepCharcoal, font=\footnotesize\itshape, align=left,
+        text=DeepCharcoal, font=\asidefont, align=left,
         text width=#1, inner sep=9pt]
     (asidebox) at (current page.south east) {#2};
   \draw[DeepCharcoal, line width=1.0pt, rounded corners=11pt,
-        decorate, decoration={random steps, segment length=8pt, amplitude=2.0pt}]
+        decorate, decoration={random steps, segment length=10pt, amplitude=1.2pt}]
     ($(asidebox.south west)+(-2pt,-2pt)$) rectangle ($(asidebox.north east)+(2pt,2pt)$);
   \draw[DeepCharcoal!70, line width=0.6pt, rounded corners=10pt,
-        decorate, decoration={random steps, segment length=12pt, amplitude=3.0pt}]
-    ($(asidebox.south west)+(-4pt,-1pt)$) rectangle ($(asidebox.north east)+(1.5pt,4pt)$);
+        decorate, decoration={random steps, segment length=14pt, amplitude=1.8pt}]
+    ($(asidebox.south west)+(-3pt,-1pt)$) rectangle ($(asidebox.north east)+(1pt,3pt)$);
   \node[anchor=south west, text=UVMGold, font=\small]
     at ([xshift=3pt, yshift=1pt]asidebox.north west) {\faCommentDots};
 \end{tikzpicture}}
