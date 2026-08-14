@@ -14,7 +14,6 @@ This site holds the materials for the AI and programming side of the semester-lo
 | Looking for the lecture slides | Posted here before August 31 |
 | Looking for starting-point files | [Templates](templates/README.md) — config pattern, cleaning/analysis skeletons, `AGENTS.md` house rules |
 | Looking for cheat sheets and links | [Materials](materials/README.md) — Git cheat sheet, research decisions log, links worth your time |
-| Looking for the assignment or AI policy | ELMS — those are your course's, not this site's |
 
 ## The workflow
 
