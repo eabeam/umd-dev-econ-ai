@@ -1,0 +1,11 @@
+/*-- scss:defaults --*/
+// TwA Bootcamp palette
+$primary: #1B4D5C;      // SlateTeal
+$link-color: #1B4D5C;
+$body-color: #2C3E50;   // DeepCharcoal
+
+/*-- scss:rules --*/
+h1, h2, h3 { color: #1B4D5C; }
+h1 { border-bottom: 2px solid #D4A84B; padding-bottom: 0.2rem; } // UVMGold rule, echoes the deck
+.navbar { border-bottom: 3px solid #D4A84B; }
+code { color: #C0534D; } // SoftCoral

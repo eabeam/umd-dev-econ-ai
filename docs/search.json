@@ -1,0 +1,303 @@
+[
+  {
+    "objectID": "assignment/README.html",
+    "href": "assignment/README.html",
+    "title": "Assignment",
+    "section": "",
+    "text": "Assignment\nThe semester assignment (LSMS project, Assignments 1–12) is distributed via ELMS — this folder holds supporting notes only.\nQuick pointers for getting started:\n\nAssignment 1, step 1 requires a World Bank microdata account and data-use agreement — if you haven’t done setup step 5, do it now; approval takes days, not minutes.\nChoose a country-year with a full household module (not a high-frequency phone survey or a panel-only round).\nRead the questionnaires, enumerator manuals, and Basic Information Document before touching the data — the agent can help you digest documentation, but it can’t read what you didn’t download.\nKeep the research decisions log alongside each assignment’s code."
+  },
+  {
+    "objectID": "materials/git_cheatsheet.html",
+    "href": "materials/git_cheatsheet.html",
+    "title": "Git Cheat Sheet for Economists",
+    "section": "",
+    "text": "A one-page reference for the commands you will use most often.\n\n\n\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"your.email@uvm.edu\"\n\n\n\n\n\n\n\nWhat You Want\nCommand\n\n\n\n\nCreate a new repo from scratch\ngit init\n\n\nDownload an existing repo\ngit clone &lt;url&gt;\n\n\n\n\n\n\n\nThis is the sequence you will repeat constantly:\n[edit files] → git status → git add &lt;files&gt; → git commit -m \"message\" → git push\n\n\n\n\n\n\n\nCommand\nWhat It Does\n\n\n\n\ngit status\nShow what has changed since the last commit\n\n\ngit add &lt;file&gt;\nStage a file (mark it for the next commit)\n\n\ngit add .\nStage all changes (use cautiously — check status first)\n\n\ngit commit -m \"message\"\nSave a snapshot with a descriptive message\n\n\ngit push\nUpload your commits to GitHub\n\n\ngit pull\nDownload your collaborator’s commits from GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommand\nWhat It Does\n\n\n\n\ngit log --oneline\nShow commit history (compact)\n\n\ngit log\nShow commit history (full detail)\n\n\ngit diff\nShow unstaged changes (what you have edited but not yet added)\n\n\ngit diff --staged\nShow staged changes (what will be in the next commit)\n\n\ngit show &lt;hash&gt;\nShow what a specific commit changed\n\n\ngit show &lt;hash&gt;:&lt;file&gt;\nShow a file as it existed at a specific commit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSituation\nCommand\n\n\n\n\nUnstage a file (undo git add)\ngit restore --staged &lt;file&gt;\n\n\nDiscard uncommitted edits to a file\ngit restore &lt;file&gt;\n\n\nUndo the last commit (keep changes staged)\ngit reset --soft HEAD~1\n\n\nSee what a file used to look like\ngit show &lt;hash&gt;:&lt;file&gt;\n\n\n\n\n\n\n\nRepository (repo): A project folder tracked by Git.\nCommit: A snapshot of your project at a point in time. Each commit has a unique hash (like a3b8f2d), a message, an author, and a timestamp.\nStaging area: A holding zone between your working files and a commit. You choose which changes go into each commit.\nRemote: A copy of your repo on GitHub (or another server). push sends your commits there; pull brings commits from there.\nHEAD: A pointer to your most recent commit. HEAD~1 means “one commit before the current one.”\n\n\n\n\n“I do not know what is going on”\ngit status\nRead the output carefully. Git usually tells you what to do next.\n“I committed a file I should not have (and have not pushed yet)”\ngit reset --soft HEAD~1\ngit restore --staged &lt;unwanted-file&gt;\ngit commit -m \"Same message as before\"\n“I want to see what the file looked like before I changed it”\ngit log --oneline &lt;file&gt;\ngit show &lt;hash&gt;:&lt;file&gt;\n“My collaborator and I edited the same file” Run git pull. If Git reports a merge conflict, open the file — Git marks the conflicting sections with &lt;&lt;&lt;&lt;&lt;&lt;&lt;, =======, and &gt;&gt;&gt;&gt;&gt;&gt;&gt;. Edit the file to keep what you want, then git add and git commit.\n“I accidentally ran git init in the wrong folder”\nrm -rf .git\nThis removes the Git repository (not your files). The folder becomes a regular folder again.\n\n\n\n\nUse a .gitignore file to tell Git which files to skip. Common entries for economics projects:\n*.dta          # Stata data\n*.csv          # CSV data\n*.log          # Stata logs\n.DS_Store      # macOS system file\nSee econ_gitignore in this folder for a complete template."
+  },
+  {
+    "objectID": "materials/git_cheatsheet.html#setup-one-time",
+    "href": "materials/git_cheatsheet.html#setup-one-time",
+    "title": "Git Cheat Sheet for Economists",
+    "section": "",
+    "text": "git config --global user.name \"Your Name\"\ngit config --global user.email \"your.email@uvm.edu\""
+  },
+  {
+    "objectID": "materials/git_cheatsheet.html#starting-a-project",
+    "href": "materials/git_cheatsheet.html#starting-a-project",
+    "title": "Git Cheat Sheet for Economists",
+    "section": "",
+    "text": "What You Want\nCommand\n\n\n\n\nCreate a new repo from scratch\ngit init\n\n\nDownload an existing repo\ngit clone &lt;url&gt;"
+  },
+  {
+    "objectID": "materials/git_cheatsheet.html#daily-workflow",
+    "href": "materials/git_cheatsheet.html#daily-workflow",
+    "title": "Git Cheat Sheet for Economists",
+    "section": "",
+    "text": "This is the sequence you will repeat constantly:\n[edit files] → git status → git add &lt;files&gt; → git commit -m \"message\" → git push\n\n\n\n\n\n\n\nCommand\nWhat It Does\n\n\n\n\ngit status\nShow what has changed since the last commit\n\n\ngit add &lt;file&gt;\nStage a file (mark it for the next commit)\n\n\ngit add .\nStage all changes (use cautiously — check status first)\n\n\ngit commit -m \"message\"\nSave a snapshot with a descriptive message\n\n\ngit push\nUpload your commits to GitHub\n\n\ngit pull\nDownload your collaborator’s commits from GitHub"
+  },
+  {
+    "objectID": "materials/git_cheatsheet.html#inspecting-history",
+    "href": "materials/git_cheatsheet.html#inspecting-history",
+    "title": "Git Cheat Sheet for Economists",
+    "section": "",
+    "text": "Command\nWhat It Does\n\n\n\n\ngit log --oneline\nShow commit history (compact)\n\n\ngit log\nShow commit history (full detail)\n\n\ngit diff\nShow unstaged changes (what you have edited but not yet added)\n\n\ngit diff --staged\nShow staged changes (what will be in the next commit)\n\n\ngit show &lt;hash&gt;\nShow what a specific commit changed\n\n\ngit show &lt;hash&gt;:&lt;file&gt;\nShow a file as it existed at a specific commit"
+  },
+  {
+    "objectID": "materials/git_cheatsheet.html#undoing-things",
+    "href": "materials/git_cheatsheet.html#undoing-things",
+    "title": "Git Cheat Sheet for Economists",
+    "section": "",
+    "text": "Situation\nCommand\n\n\n\n\nUnstage a file (undo git add)\ngit restore --staged &lt;file&gt;\n\n\nDiscard uncommitted edits to a file\ngit restore &lt;file&gt;\n\n\nUndo the last commit (keep changes staged)\ngit reset --soft HEAD~1\n\n\nSee what a file used to look like\ngit show &lt;hash&gt;:&lt;file&gt;"
+  },
+  {
+    "objectID": "materials/git_cheatsheet.html#key-concepts",
+    "href": "materials/git_cheatsheet.html#key-concepts",
+    "title": "Git Cheat Sheet for Economists",
+    "section": "",
+    "text": "Repository (repo): A project folder tracked by Git.\nCommit: A snapshot of your project at a point in time. Each commit has a unique hash (like a3b8f2d), a message, an author, and a timestamp.\nStaging area: A holding zone between your working files and a commit. You choose which changes go into each commit.\nRemote: A copy of your repo on GitHub (or another server). push sends your commits there; pull brings commits from there.\nHEAD: A pointer to your most recent commit. HEAD~1 means “one commit before the current one.”"
+  },
+  {
+    "objectID": "materials/git_cheatsheet.html#when-things-go-wrong",
+    "href": "materials/git_cheatsheet.html#when-things-go-wrong",
+    "title": "Git Cheat Sheet for Economists",
+    "section": "",
+    "text": "“I do not know what is going on”\ngit status\nRead the output carefully. Git usually tells you what to do next.\n“I committed a file I should not have (and have not pushed yet)”\ngit reset --soft HEAD~1\ngit restore --staged &lt;unwanted-file&gt;\ngit commit -m \"Same message as before\"\n“I want to see what the file looked like before I changed it”\ngit log --oneline &lt;file&gt;\ngit show &lt;hash&gt;:&lt;file&gt;\n“My collaborator and I edited the same file” Run git pull. If Git reports a merge conflict, open the file — Git marks the conflicting sections with &lt;&lt;&lt;&lt;&lt;&lt;&lt;, =======, and &gt;&gt;&gt;&gt;&gt;&gt;&gt;. Edit the file to keep what you want, then git add and git commit.\n“I accidentally ran git init in the wrong folder”\nrm -rf .git\nThis removes the Git repository (not your files). The folder becomes a regular folder again."
+  },
+  {
+    "objectID": "materials/git_cheatsheet.html#files-to-ignore",
+    "href": "materials/git_cheatsheet.html#files-to-ignore",
+    "title": "Git Cheat Sheet for Economists",
+    "section": "",
+    "text": "Use a .gitignore file to tell Git which files to skip. Common entries for economics projects:\n*.dta          # Stata data\n*.csv          # CSV data\n*.log          # Stata logs\n.DS_Store      # macOS system file\nSee econ_gitignore in this folder for a complete template."
+  },
+  {
+    "objectID": "materials/README.html",
+    "href": "materials/README.html",
+    "title": "Materials",
+    "section": "",
+    "text": "Cheat sheets and curated links for the semester project. Everything here is yours to copy into your own repo — and see templates/ for working versions of the config pattern, cleaning/analysis file skeletons, and the AGENTS.md house-rules file the lecture refers to.\n\n\n\n\n\nFile\nWhen to use it\n\n\n\n\nResearch decisions log\nEvery assignment. Log each cleaning/construction choice — especially ones an AI agent made on your behalf.\n\n\nGit cheat sheet\nKeep open until the commands are muscle memory.\n\n\nGood commit messages\nWhen your history starts reading “stuff”, “more stuff”, “final”.\n\n\necon_gitignore_template\nCopy into your repo as .gitignore — keeps data files and log clutter out of Git.\n\n\n\n\n\n\nConcepts (Thinking with Agents modules — short, economics-native): - Terminal Basics — what a shell is and why reproducibility runs through it - Git & GitHub Essentials — version control from zero - AI Code Assistance — when AI-generated code is dangerous - Data Exploration with AI — guardrails for AI + data\nLSMS: - LSMS survey catalog (microdata downloads) - LSMS program page (documentation, guidebooks) - LSMS team on GitHub — survey tooling and the harmonized LSMS-ISA agricultural dataset - Working in R? The nadaverse and WBqueryR packages talk to the Microdata Library’s catalog API — good for searching studies and pulling codebooks/file lists programmatically (a nice agent task). The data files themselves you download yourself, through your account and data-use agreement.\nGood research code: - Gentzkow & Shapiro, Code and Data for the Social Sciences: A Practitioner’s Guide — the classic; short and worth reading in full\nTools: - Codex IDE extension docs - GitHub Student Developer Pack (includes free Copilot)\nMore: - Thinking with Agents — resources page — a living, annotated list of apps, academic tools, policies, and privacy notes; maintained beyond this course, so link there rather than here for anything current"
+  },
+  {
+    "objectID": "materials/README.html#in-this-folder",
+    "href": "materials/README.html#in-this-folder",
+    "title": "Materials",
+    "section": "",
+    "text": "File\nWhen to use it\n\n\n\n\nResearch decisions log\nEvery assignment. Log each cleaning/construction choice — especially ones an AI agent made on your behalf.\n\n\nGit cheat sheet\nKeep open until the commands are muscle memory.\n\n\nGood commit messages\nWhen your history starts reading “stuff”, “more stuff”, “final”.\n\n\necon_gitignore_template\nCopy into your repo as .gitignore — keeps data files and log clutter out of Git."
+  },
+  {
+    "objectID": "materials/README.html#curated-links",
+    "href": "materials/README.html#curated-links",
+    "title": "Materials",
+    "section": "",
+    "text": "Concepts (Thinking with Agents modules — short, economics-native): - Terminal Basics — what a shell is and why reproducibility runs through it - Git & GitHub Essentials — version control from zero - AI Code Assistance — when AI-generated code is dangerous - Data Exploration with AI — guardrails for AI + data\nLSMS: - LSMS survey catalog (microdata downloads) - LSMS program page (documentation, guidebooks) - LSMS team on GitHub — survey tooling and the harmonized LSMS-ISA agricultural dataset - Working in R? The nadaverse and WBqueryR packages talk to the Microdata Library’s catalog API — good for searching studies and pulling codebooks/file lists programmatically (a nice agent task). The data files themselves you download yourself, through your account and data-use agreement.\nGood research code: - Gentzkow & Shapiro, Code and Data for the Social Sciences: A Practitioner’s Guide — the classic; short and worth reading in full\nTools: - Codex IDE extension docs - GitHub Student Developer Pack (includes free Copilot)\nMore: - Thinking with Agents — resources page — a living, annotated list of apps, academic tools, policies, and privacy notes; maintained beyond this course, so link there rather than here for anything current"
+  },
+  {
+    "objectID": "setup/README.html",
+    "href": "setup/README.html",
+    "title": "Setup guide — do this before August 31",
+    "section": "",
+    "text": "Everything here is one-time setup, so class time can go to actual work. Budget about an hour, plus waiting time for two approvals (steps 4 and 5) that are out of your hands — start those today.\nGetting stuck somewhere is normal — note where, move on, and bring it to the first session.\n\n\n\n1. ChatGPT subscription ($20/mo)\n2. VS Code installed, Codex extension working\n3. Git installed\n4. GitHub account + free student benefits + your personal course repo\n5. World Bank microdata account (start today — approval lag)\n6. The five-minute test\n\n\n\n\n\nThe course workflow uses an AI agent that comes with a paid ChatGPT plan. Two routes — either is fine:\n\nRoute A (always works): personal ChatGPT Plus, $20/month. Go to chatgpt.com, sign in (create an account with any email), and upgrade to Plus from the account menu. A Plus plan should comfortably cover this course’s workload; you can cancel after the semester.\nRoute B: UMD ChatGPT Enterprise. UMD has an institutional ChatGPT agreement. Email UMD IT and ask whether graduate students can get a ChatGPT Enterprise/Edu seat that includes Codex access. If the answer is slow or unclear, don’t wait — use Route A.\n\nPrefer Claude? That’s allowed — but at the $20 tier expect to hit usage limits with agent-style work; you’d likely need a heavier plan. The class demos use the ChatGPT/Codex stack.\n\n\n\nVS Code is a free code editor; the Codex extension puts the AI agent in a panel next to your code.\n\nDownload and install VS Code: code.visualstudio.com\nOpen VS Code → click the Extensions icon in the left sidebar (four squares) → search “Codex” → install the extension published by OpenAI.\nClick the Codex icon that appears in the sidebar and sign in with your ChatGPT account from step 1.\nReference docs if anything looks different: developers.openai.com/codex/ide\n\n\n\n\nGit tracks versions of your code. (Concepts come later — right now just install it.)\n\nMac: open Terminal, type git --version, press Enter. If it’s not installed, macOS will offer to install it — accept.\nWindows: download from git-scm.com/downloads and install with default options.\n\nThen set your identity (in Terminal / Git Bash), using the same email you’ll use for GitHub:\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"you@umd.edu\"\n\n\n\n\nCreate an account at github.com using your UMD email (or add your UMD email to an existing account).\nApply for the free GitHub Student Developer Pack: education.github.com/pack. Verification can take a few days — this is one of the two “start today” items. It includes GitHub Copilot free for verified students (AI autocomplete inside VS Code — different tool-fit from Codex; we’ll cover when to use which in the lecture).\nCreate your own personal repository for the course: on GitHub click New repository → name it something like lsms-project → Private → check “Add a README” → Create. This repo is yours — it outlives the course, and your submission at semester’s end is simply its link.\nConnect it to your computer: in VS Code, open the Command Palette (Cmd/Ctrl+Shift+P) → type “Git: Clone” → paste your repo’s URL → choose a folder you’ll remember (e.g., Documents/lsms-project).\n\nWant the concepts behind steps 3–4? Short reads: Terminal Basics and Git & GitHub Essentials.\n\n\n\nAssignment 1 requires downloading an LSMS survey, which requires a (free) World Bank microdata account and a data-use agreement — and approval is not instant.\n\nGo to the LSMS catalog: microdata.worldbank.org/index.php/catalog/lsms\nCreate an account (top right).\nBrowse surveys now if you like (choose a country-year with a full household module — details in Assignment 1), but at minimum get the account created so the data-use agreement is the only step left when you pick.\n\nBackground on the program: worldbank.org/en/programs/lsms\n\n\n\nYou’re done when all four of these work:\n\nOpen your cloned course repo folder in VS Code (File → Open Folder).\nOpen the Codex panel and ask: “Create a file called hello.do that displays ‘setup works’.” Watch it propose the file; accept the change.\nRun the file in Stata (or your package of choice) — confirm it runs.\nCommit and push: in VS Code’s Source Control panel (left sidebar), type a message like test: setup works, click Commit, then Sync/Push. Refresh your repo page on GitHub — hello.do should be there.\n\nIf all four worked, that’s the entire semester’s workflow in miniature: agent writes → you review → it runs → you check the output → you commit. See you August 31!\n\n\n\n\nVS Code earns its keep beyond the agent. Worth installing while you’re in the Extensions marketplace:\n\nLaTeX Workshop — compile your papers in the same window as your code (the agent can edit .tex files too)\nA Stata syntax-highlighting extension — search “Stata,” pick the popular one\nMarkdown preview is built in — open any .md file and press Cmd/Ctrl+Shift+V\n\n\n\n\n\nStata stays our default language (matching your econometrics sequence), and it plays nicely with this workflow. Two ways to run your code, and you’ll use both:\n\nYou run it: open the .do file in Stata as usual. Good when you’re exploring interactively.\nThe agent runs it: Stata has a batch mode (stata-mp -b do myfile.do from the terminal), which writes a .log file — so the agent can run your do-file, read the log, and fix its own errors. We’ll set this up together in the first session if it doesn’t work out of the box on your machine.\n\nEither way, the part that can’t be delegated is the same: you read the output and decide whether it’s right. (You may also use R, Python, or anything else — the workflow is identical, minus the batch-mode wrinkle.)"
+  },
+  {
+    "objectID": "setup/README.html#checklist",
+    "href": "setup/README.html#checklist",
+    "title": "Setup guide — do this before August 31",
+    "section": "",
+    "text": "1. ChatGPT subscription ($20/mo)\n2. VS Code installed, Codex extension working\n3. Git installed\n4. GitHub account + free student benefits + your personal course repo\n5. World Bank microdata account (start today — approval lag)\n6. The five-minute test"
+  },
+  {
+    "objectID": "setup/README.html#chatgpt-subscription",
+    "href": "setup/README.html#chatgpt-subscription",
+    "title": "Setup guide — do this before August 31",
+    "section": "",
+    "text": "The course workflow uses an AI agent that comes with a paid ChatGPT plan. Two routes — either is fine:\n\nRoute A (always works): personal ChatGPT Plus, $20/month. Go to chatgpt.com, sign in (create an account with any email), and upgrade to Plus from the account menu. A Plus plan should comfortably cover this course’s workload; you can cancel after the semester.\nRoute B: UMD ChatGPT Enterprise. UMD has an institutional ChatGPT agreement. Email UMD IT and ask whether graduate students can get a ChatGPT Enterprise/Edu seat that includes Codex access. If the answer is slow or unclear, don’t wait — use Route A.\n\nPrefer Claude? That’s allowed — but at the $20 tier expect to hit usage limits with agent-style work; you’d likely need a heavier plan. The class demos use the ChatGPT/Codex stack."
+  },
+  {
+    "objectID": "setup/README.html#vs-code-the-codex-extension",
+    "href": "setup/README.html#vs-code-the-codex-extension",
+    "title": "Setup guide — do this before August 31",
+    "section": "",
+    "text": "VS Code is a free code editor; the Codex extension puts the AI agent in a panel next to your code.\n\nDownload and install VS Code: code.visualstudio.com\nOpen VS Code → click the Extensions icon in the left sidebar (four squares) → search “Codex” → install the extension published by OpenAI.\nClick the Codex icon that appears in the sidebar and sign in with your ChatGPT account from step 1.\nReference docs if anything looks different: developers.openai.com/codex/ide"
+  },
+  {
+    "objectID": "setup/README.html#git",
+    "href": "setup/README.html#git",
+    "title": "Setup guide — do this before August 31",
+    "section": "",
+    "text": "Git tracks versions of your code. (Concepts come later — right now just install it.)\n\nMac: open Terminal, type git --version, press Enter. If it’s not installed, macOS will offer to install it — accept.\nWindows: download from git-scm.com/downloads and install with default options.\n\nThen set your identity (in Terminal / Git Bash), using the same email you’ll use for GitHub:\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"you@umd.edu\""
+  },
+  {
+    "objectID": "setup/README.html#github-account-student-benefits-and-your-course-repo",
+    "href": "setup/README.html#github-account-student-benefits-and-your-course-repo",
+    "title": "Setup guide — do this before August 31",
+    "section": "",
+    "text": "Create an account at github.com using your UMD email (or add your UMD email to an existing account).\nApply for the free GitHub Student Developer Pack: education.github.com/pack. Verification can take a few days — this is one of the two “start today” items. It includes GitHub Copilot free for verified students (AI autocomplete inside VS Code — different tool-fit from Codex; we’ll cover when to use which in the lecture).\nCreate your own personal repository for the course: on GitHub click New repository → name it something like lsms-project → Private → check “Add a README” → Create. This repo is yours — it outlives the course, and your submission at semester’s end is simply its link.\nConnect it to your computer: in VS Code, open the Command Palette (Cmd/Ctrl+Shift+P) → type “Git: Clone” → paste your repo’s URL → choose a folder you’ll remember (e.g., Documents/lsms-project).\n\nWant the concepts behind steps 3–4? Short reads: Terminal Basics and Git & GitHub Essentials."
+  },
+  {
+    "objectID": "setup/README.html#world-bank-microdata-account-start-today",
+    "href": "setup/README.html#world-bank-microdata-account-start-today",
+    "title": "Setup guide — do this before August 31",
+    "section": "",
+    "text": "Assignment 1 requires downloading an LSMS survey, which requires a (free) World Bank microdata account and a data-use agreement — and approval is not instant.\n\nGo to the LSMS catalog: microdata.worldbank.org/index.php/catalog/lsms\nCreate an account (top right).\nBrowse surveys now if you like (choose a country-year with a full household module — details in Assignment 1), but at minimum get the account created so the data-use agreement is the only step left when you pick.\n\nBackground on the program: worldbank.org/en/programs/lsms"
+  },
+  {
+    "objectID": "setup/README.html#the-five-minute-test",
+    "href": "setup/README.html#the-five-minute-test",
+    "title": "Setup guide — do this before August 31",
+    "section": "",
+    "text": "You’re done when all four of these work:\n\nOpen your cloned course repo folder in VS Code (File → Open Folder).\nOpen the Codex panel and ask: “Create a file called hello.do that displays ‘setup works’.” Watch it propose the file; accept the change.\nRun the file in Stata (or your package of choice) — confirm it runs.\nCommit and push: in VS Code’s Source Control panel (left sidebar), type a message like test: setup works, click Commit, then Sync/Push. Refresh your repo page on GitHub — hello.do should be there.\n\nIf all four worked, that’s the entire semester’s workflow in miniature: agent writes → you review → it runs → you check the output → you commit. See you August 31!"
+  },
+  {
+    "objectID": "setup/README.html#nice-extras-optional-five-minutes",
+    "href": "setup/README.html#nice-extras-optional-five-minutes",
+    "title": "Setup guide — do this before August 31",
+    "section": "",
+    "text": "VS Code earns its keep beyond the agent. Worth installing while you’re in the Extensions marketplace:\n\nLaTeX Workshop — compile your papers in the same window as your code (the agent can edit .tex files too)\nA Stata syntax-highlighting extension — search “Stata,” pick the popular one\nMarkdown preview is built in — open any .md file and press Cmd/Ctrl+Shift+V"
+  },
+  {
+    "objectID": "setup/README.html#a-note-on-stata",
+    "href": "setup/README.html#a-note-on-stata",
+    "title": "Setup guide — do this before August 31",
+    "section": "",
+    "text": "Stata stays our default language (matching your econometrics sequence), and it plays nicely with this workflow. Two ways to run your code, and you’ll use both:\n\nYou run it: open the .do file in Stata as usual. Good when you’re exploring interactively.\nThe agent runs it: Stata has a batch mode (stata-mp -b do myfile.do from the terminal), which writes a .log file — so the agent can run your do-file, read the log, and fix its own errors. We’ll set this up together in the first session if it doesn’t work out of the box on your machine.\n\nEither way, the part that can’t be delegated is the same: you read the output and decide whether it’s right. (You may also use R, Python, or anything else — the workflow is identical, minus the batch-mode wrinkle.)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI-assisted research programming",
+    "section": "",
+    "text": "This site holds the materials for the AI and programming side of the semester-long LSMS project — a guest module by Emily Beam (University of Vermont). Everything here is built to outlast the course: the setup, the habits, and the code you write are yours to keep."
+  },
+  {
+    "objectID": "index.html#start-here",
+    "href": "index.html#start-here",
+    "title": "AI-assisted research programming",
+    "section": "Start here",
+    "text": "Start here\n\n\n\nIf you’re…\nGo to\n\n\n\n\nSetting up before the semester\nSetup guide — do this before the first class (August 31). Start today: one step needs a World Bank approval that takes days, not minutes.\n\n\nLooking for the lecture slides\nPosted here before August 31\n\n\nLooking for starting-point files\nTemplates — config pattern, cleaning/analysis skeletons, AGENTS.md house rules\n\n\nLooking for cheat sheets and links\nMaterials — Git cheat sheet, research decisions log, links worth your time\n\n\nChecking the AI rules\nAI policy\n\n\nLooking for the assignment\nAssignment notes — the assignment itself lives on ELMS"
+  },
+  {
+    "objectID": "index.html#the-workflow",
+    "href": "index.html#the-workflow",
+    "title": "AI-assisted research programming",
+    "section": "The workflow",
+    "text": "The workflow\nYou’ll do the semester project in VS Code, with an AI agent working beside your code and your files in your own GitHub repository. That’s more setup than opening a chat window — but it’s the version where you can actually see what the AI did to your analysis, and where the code survives the semester.\nThe loop to remember:\n\nagent writes → you review → it runs → you check the output → you commit"
+  },
+  {
+    "objectID": "index.html#reuse",
+    "href": "index.html#reuse",
+    "title": "AI-assisted research programming",
+    "section": "Reuse",
+    "text": "Reuse\nMaterials are CC-BY 4.0 and draw on Thinking with Agents, an open collection of AI modules for economists. Instructors: take whatever’s useful — everything is plain markdown and LaTeX in the repo."
+  },
+  {
+    "objectID": "ai-policy.html",
+    "href": "ai-policy.html",
+    "title": "AI Use Policy",
+    "section": "",
+    "text": "From the course assignment, plus the reasoning behind it.\n\n\nYou may use AI for: - Programming assistance, debugging, and explaining documentation - Brainstorming analytical approaches - Proofreading your write-ups\nYou may not use AI to: - Generate the text that you submit - Do your interpretation for you — reading tables, drawing conclusions, and the analytical thinking are yours\nAlways: you remain responsible for verifying every result and understanding every line of your code.\nGit/GitHub is encouraged but not required — you will not be penalized for skipping it.\n\n\n\nThe coding is a means; the economics is the end. AI is genuinely good at the means — writing a loop, explaining a merge error, drafting a cleaning file. If it also does the interpretation, the course has nothing left to teach you, and your future self has nothing to build on.\nTwo failure modes to watch for in AI-written code (we cover both in the guest lecture):\n\nCode that isn’t wrong but isn’t readable. You (and your future coauthors) must be able to open a file and follow it.\nSilent research decisions. AI code will happily impute missing values, drop observations, or recode outliers without telling you — choices that are research decisions, not programming details. Log them: see the research decisions log template.\n\nThe enforcement mechanism is mostly you: the in-class discussions work only if the tables are yours to explain."
+  },
+  {
+    "objectID": "ai-policy.html#the-rules",
+    "href": "ai-policy.html#the-rules",
+    "title": "AI Use Policy",
+    "section": "",
+    "text": "You may use AI for: - Programming assistance, debugging, and explaining documentation - Brainstorming analytical approaches - Proofreading your write-ups\nYou may not use AI to: - Generate the text that you submit - Do your interpretation for you — reading tables, drawing conclusions, and the analytical thinking are yours\nAlways: you remain responsible for verifying every result and understanding every line of your code.\nGit/GitHub is encouraged but not required — you will not be penalized for skipping it."
+  },
+  {
+    "objectID": "ai-policy.html#why-the-line-is-drawn-there",
+    "href": "ai-policy.html#why-the-line-is-drawn-there",
+    "title": "AI Use Policy",
+    "section": "",
+    "text": "The coding is a means; the economics is the end. AI is genuinely good at the means — writing a loop, explaining a merge error, drafting a cleaning file. If it also does the interpretation, the course has nothing left to teach you, and your future self has nothing to build on.\nTwo failure modes to watch for in AI-written code (we cover both in the guest lecture):\n\nCode that isn’t wrong but isn’t readable. You (and your future coauthors) must be able to open a file and follow it.\nSilent research decisions. AI code will happily impute missing values, drop observations, or recode outliers without telling you — choices that are research decisions, not programming details. Log them: see the research decisions log template.\n\nThe enforcement mechanism is mostly you: the in-class discussions work only if the tables are yours to explain."
+  },
+  {
+    "objectID": "templates/README.html",
+    "href": "templates/README.html",
+    "title": "Templates",
+    "section": "",
+    "text": "Templates\nWorking versions of everything the lecture refers to. These aren’t rules — they’re starting points. Copy them into your repo, adapt them to your project, and by December they’ll be yours.\n\n\n\nFile\nWhat it is\n\n\n\n\n00_config.do\nThe paths file every other file includes. Pairs with config_local_template.do.\n\n\nconfig_local_template.do\nCopy to config_local.do (gitignored), set your project root. The one file with a real path in it.\n\n\ncleaning_file_template.do\nSkeleton for a cleaning file: load raw, clean, validate, save.\n\n\nanalysis_file_template.do\nSkeleton for a self-contained analysis file: one file, one table.\n\n\nAGENTS.md\nHouse-style instructions for AI agents working in your repo — the file that keeps agent code readable and its decisions visible. Adapt the rules to your taste, but have the file.\n\n\n\nA note on the config pattern: the lecture shows the one-file version (config.do with a global root), which is fine for a solo project. The two-file version here is the sharing-ready upgrade — the committed 00_config.do never contains a personal path, so the repo runs on any machine after one copy-and-edit."
+  },
+  {
+    "objectID": "materials/cleaning_decision_log.html",
+    "href": "materials/cleaning_decision_log.html",
+    "title": "Research Decisions Log — Template",
+    "section": "",
+    "text": "Cleaning and variable-construction choices are research decisions. This log makes them visible — including the ones an AI agent made on your behalf: when an agent writes your cleaning code, audit it for imputations, dropped observations, and recodes, and log each one below as if you had made it yourself. (You did.)\n\n\n\nDataset: _______________________________________________\nDate: _______________________________________________\nAnalyst: _______________________________________________\nOriginal sample size: _______________________________________________\n\n\n\n\n\nFor each data quality issue you identify, document your decision below. There are no universally “correct” answers to cleaning decisions — but every decision must be justified and its consequences understood.\nBefore filling this out, explore the data using summarize, tabulate, codebook, or equivalent commands. Ask AI to help you flag potential issues, but make all final decisions yourself.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIssue #\nWhat I Found\nDecision\nJustification\nAlternative Considered\nSample Size Impact\n\n\n\n\n1\n\n\n\n\n\n\n\n2\n\n\n\n\n\n\n\n3\n\n\n\n\n\n\n\n4\n\n\n\n\n\n\n\n5\n\n\n\n\n\n\n\n6\n\n\n\n\n\n\n\n7\n\n\n\n\n\n\n\n8\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat I Found: Describe the issue precisely (e.g., “3 respondents with earnings &gt; 500,000; median earnings is 17,000”)\nDecision: What you did (e.g., “Winsorized at 99th percentile”, “Dropped observation”, “Recoded to missing”, “Kept as-is”)\nJustification: Why this is the right call for your analysis (e.g., “Likely data entry error based on context”, “Value is plausible for a business owner”)\nAlternative Considered: What else you could have done and why you didn’t\nSample Size Impact: How many observations are affected (e.g., “3 observations recoded”, “Dropped 12 obs, N goes from 500 to 488”)\n\n\n\n\n\n\nFinal sample size: _______________________________________________\nTotal observations dropped: _______________________________________________\nTotal observations with recoded values: _______________________________________________\nPercentage of sample affected by any cleaning decision: _______________________________________________\n\n\n\nEvery cleaning decision is a research decision. If you can’t justify it, don’t do it."
+  },
+  {
+    "objectID": "materials/cleaning_decision_log.html#dataset-information",
+    "href": "materials/cleaning_decision_log.html#dataset-information",
+    "title": "Research Decisions Log — Template",
+    "section": "",
+    "text": "Dataset: _______________________________________________\nDate: _______________________________________________\nAnalyst: _______________________________________________\nOriginal sample size: _______________________________________________"
+  },
+  {
+    "objectID": "materials/cleaning_decision_log.html#instructions",
+    "href": "materials/cleaning_decision_log.html#instructions",
+    "title": "Research Decisions Log — Template",
+    "section": "",
+    "text": "For each data quality issue you identify, document your decision below. There are no universally “correct” answers to cleaning decisions — but every decision must be justified and its consequences understood.\nBefore filling this out, explore the data using summarize, tabulate, codebook, or equivalent commands. Ask AI to help you flag potential issues, but make all final decisions yourself."
+  },
+  {
+    "objectID": "materials/cleaning_decision_log.html#cleaning-decisions",
+    "href": "materials/cleaning_decision_log.html#cleaning-decisions",
+    "title": "Research Decisions Log — Template",
+    "section": "",
+    "text": "Issue #\nWhat I Found\nDecision\nJustification\nAlternative Considered\nSample Size Impact\n\n\n\n\n1\n\n\n\n\n\n\n\n2\n\n\n\n\n\n\n\n3\n\n\n\n\n\n\n\n4\n\n\n\n\n\n\n\n5\n\n\n\n\n\n\n\n6\n\n\n\n\n\n\n\n7\n\n\n\n\n\n\n\n8"
+  },
+  {
+    "objectID": "materials/cleaning_decision_log.html#column-guide",
+    "href": "materials/cleaning_decision_log.html#column-guide",
+    "title": "Research Decisions Log — Template",
+    "section": "",
+    "text": "What I Found: Describe the issue precisely (e.g., “3 respondents with earnings &gt; 500,000; median earnings is 17,000”)\nDecision: What you did (e.g., “Winsorized at 99th percentile”, “Dropped observation”, “Recoded to missing”, “Kept as-is”)\nJustification: Why this is the right call for your analysis (e.g., “Likely data entry error based on context”, “Value is plausible for a business owner”)\nAlternative Considered: What else you could have done and why you didn’t\nSample Size Impact: How many observations are affected (e.g., “3 observations recoded”, “Dropped 12 obs, N goes from 500 to 488”)"
+  },
+  {
+    "objectID": "materials/cleaning_decision_log.html#final-sample-summary",
+    "href": "materials/cleaning_decision_log.html#final-sample-summary",
+    "title": "Research Decisions Log — Template",
+    "section": "",
+    "text": "Final sample size: _______________________________________________\nTotal observations dropped: _______________________________________________\nTotal observations with recoded values: _______________________________________________\nPercentage of sample affected by any cleaning decision: _______________________________________________\n\n\n\nEvery cleaning decision is a research decision. If you can’t justify it, don’t do it."
+  },
+  {
+    "objectID": "materials/good_commit_messages.html",
+    "href": "materials/good_commit_messages.html",
+    "title": "Writing Good Commit Messages",
+    "section": "",
+    "text": "Your commit messages are a research log. Future you will read them when you are trying to remember why you changed something six months ago. Your co-authors will read them when they are trying to understand what you did. Journal referees may read them in your replication package.\nMake them count.\n\n\n\n[Action verb] [what changed] [why, if not obvious]\nStart with a verb. Be specific about what changed. Add context if someone reading just the message would not understand the purpose.\n\n\n\n\n\n\n\n\n\n\n\n\n\nMessage\nWhy It Is Bad\n\n\n\n\nupdate\nUpdate what? Which file? Why?\n\n\nchanges\nThis says nothing.\n\n\nfixed stuff\nWhat stuff? What was broken?\n\n\nfinal\nIt is never final.\n\n\nfinal v2\nProof that it was not final.\n\n\nasdfg\nYou will regret this.\n\n\nWIP\nAcceptable as a temporary save, but clean it up before sharing.\n\n\n\n\n\n\n\n\n\n\n\n\n\nMessage\nWhy It Works\n\n\n\n\nAdd income variable construction from raw survey data\nClear action, specific variable, identifies the data source.\n\n\nFix merge error: duplicate household IDs in round 2\nIdentifies the bug (duplicates), the location (round 2), and the action (fix).\n\n\nAdd district fixed effects to main regression specification\nSpecific about which specification changed and what was added.\n\n\nDrop top 1% income outliers per referee suggestion\nDocuments the change and the reason (referee request).\n\n\nClean occupation codes: harmonize across 2015-2020 ACS waves\nSpecific about what was cleaned and the scope.\n\n\nAdd robustness table: results with and without state controls\nClear about what was added and its purpose.\n\n\nRemove unused helper functions from 01_clean_data.do\nSpecific about what was removed and where.\n\n\nUpdate README with data access instructions for replication\nClear scope and purpose.\n\n\n\n\n\n\n\n\nImagine you are working on a project studying the effect of a job training program on earnings. Here is what a clean commit history might look like:\nf3a21b8  Add heterogeneity analysis by gender and education level\nc9e12d4  Fix top-coding of earnings at 99th percentile (was 95th)\na8b34c1  Add district fixed effects to main specification\n7d2e9f0  Restrict sample to working-age adults (18-65)\n5c1a8b3  Merge baseline and endline survey data on household ID\n2e7d4a6  Clean income variable: convert to real KES using CPI\n1a3b5c7  Import raw household survey data\nReading from bottom to top, you can reconstruct the entire analysis pipeline. Each commit is a meaningful, recoverable step. If the top-coding threshold needs to change again, you know exactly which commit to look at.\n\n\n\n\n\nStart with a verb: Add, Fix, Update, Remove, Refactor, Clean, Merge, Restrict, Drop\nBe specific: “Fix bug” is useless. “Fix duplicate observations caused by m:m merge on hhid” is actionable.\nKeep the first line under 72 characters: This is the summary that appears in git log --oneline.\nIf you need more detail, add a body: Leave a blank line after the summary, then write a longer explanation.\n\ngit commit -m \"Restrict sample to working-age adults (18-65)\n\nPrevious analysis included all ages. Referee 2 noted that including\nchildren and retirees biases the earnings estimates downward.\nAffects Tables 2-4 and Figure 3.\"\n\nCommit one logical change at a time: If you fixed a bug AND added a new table, make two commits. This makes your history readable and individual changes easy to undo.\n\n\n\n\n\nBefore you commit, ask yourself: “If I read this message in six months with no other context, would I understand what changed and why?”\nIf the answer is no, rewrite it."
+  },
+  {
+    "objectID": "materials/good_commit_messages.html#the-template",
+    "href": "materials/good_commit_messages.html#the-template",
+    "title": "Writing Good Commit Messages",
+    "section": "",
+    "text": "[Action verb] [what changed] [why, if not obvious]\nStart with a verb. Be specific about what changed. Add context if someone reading just the message would not understand the purpose."
+  },
+  {
+    "objectID": "materials/good_commit_messages.html#bad-vs.-good-commit-messages",
+    "href": "materials/good_commit_messages.html#bad-vs.-good-commit-messages",
+    "title": "Writing Good Commit Messages",
+    "section": "",
+    "text": "Message\nWhy It Is Bad\n\n\n\n\nupdate\nUpdate what? Which file? Why?\n\n\nchanges\nThis says nothing.\n\n\nfixed stuff\nWhat stuff? What was broken?\n\n\nfinal\nIt is never final.\n\n\nfinal v2\nProof that it was not final.\n\n\nasdfg\nYou will regret this.\n\n\nWIP\nAcceptable as a temporary save, but clean it up before sharing.\n\n\n\n\n\n\n\n\n\n\n\n\n\nMessage\nWhy It Works\n\n\n\n\nAdd income variable construction from raw survey data\nClear action, specific variable, identifies the data source.\n\n\nFix merge error: duplicate household IDs in round 2\nIdentifies the bug (duplicates), the location (round 2), and the action (fix).\n\n\nAdd district fixed effects to main regression specification\nSpecific about which specification changed and what was added.\n\n\nDrop top 1% income outliers per referee suggestion\nDocuments the change and the reason (referee request).\n\n\nClean occupation codes: harmonize across 2015-2020 ACS waves\nSpecific about what was cleaned and the scope.\n\n\nAdd robustness table: results with and without state controls\nClear about what was added and its purpose.\n\n\nRemove unused helper functions from 01_clean_data.do\nSpecific about what was removed and where.\n\n\nUpdate README with data access instructions for replication\nClear scope and purpose."
+  },
+  {
+    "objectID": "materials/good_commit_messages.html#a-real-world-example",
+    "href": "materials/good_commit_messages.html#a-real-world-example",
+    "title": "Writing Good Commit Messages",
+    "section": "",
+    "text": "Imagine you are working on a project studying the effect of a job training program on earnings. Here is what a clean commit history might look like:\nf3a21b8  Add heterogeneity analysis by gender and education level\nc9e12d4  Fix top-coding of earnings at 99th percentile (was 95th)\na8b34c1  Add district fixed effects to main specification\n7d2e9f0  Restrict sample to working-age adults (18-65)\n5c1a8b3  Merge baseline and endline survey data on household ID\n2e7d4a6  Clean income variable: convert to real KES using CPI\n1a3b5c7  Import raw household survey data\nReading from bottom to top, you can reconstruct the entire analysis pipeline. Each commit is a meaningful, recoverable step. If the top-coding threshold needs to change again, you know exactly which commit to look at."
+  },
+  {
+    "objectID": "materials/good_commit_messages.html#guidelines",
+    "href": "materials/good_commit_messages.html#guidelines",
+    "title": "Writing Good Commit Messages",
+    "section": "",
+    "text": "Start with a verb: Add, Fix, Update, Remove, Refactor, Clean, Merge, Restrict, Drop\nBe specific: “Fix bug” is useless. “Fix duplicate observations caused by m:m merge on hhid” is actionable.\nKeep the first line under 72 characters: This is the summary that appears in git log --oneline.\nIf you need more detail, add a body: Leave a blank line after the summary, then write a longer explanation.\n\ngit commit -m \"Restrict sample to working-age adults (18-65)\n\nPrevious analysis included all ages. Referee 2 noted that including\nchildren and retirees biases the earnings estimates downward.\nAffects Tables 2-4 and Figure 3.\"\n\nCommit one logical change at a time: If you fixed a bug AND added a new table, make two commits. This makes your history readable and individual changes easy to undo."
+  },
+  {
+    "objectID": "materials/good_commit_messages.html#quick-self-test",
+    "href": "materials/good_commit_messages.html#quick-self-test",
+    "title": "Writing Good Commit Messages",
+    "section": "",
+    "text": "Before you commit, ask yourself: “If I read this message in six months with no other context, would I understand what changed and why?”\nIf the answer is no, rewrite it."
+  }
+]

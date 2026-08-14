@@ -1,0 +1,30 @@
+---
+title: "AI-assisted research programming"
+subtitle: "UMD graduate development economics · Fall 2026"
+toc: false
+---
+
+This site holds the materials for the AI and programming side of the semester-long LSMS project — a guest module by [Emily Beam](https://www.uvm.edu/cas/economics) (University of Vermont). Everything here is built to outlast the course: the setup, the habits, and the code you write are yours to keep.
+
+## Start here
+
+| If you're... | Go to |
+|---|---|
+| Setting up before the semester | **[Setup guide](setup/README.md)** — do this before the first class (August 31). Start today: one step needs a World Bank approval that takes days, not minutes. |
+| Looking for the lecture slides | Posted here before August 31 |
+| Looking for starting-point files | [Templates](templates/README.md) — config pattern, cleaning/analysis skeletons, `AGENTS.md` house rules |
+| Looking for cheat sheets and links | [Materials](materials/README.md) — Git cheat sheet, research decisions log, links worth your time |
+| Checking the AI rules | [AI policy](ai-policy.md) |
+| Looking for the assignment | [Assignment notes](assignment/README.md) — the assignment itself lives on ELMS |
+
+## The workflow
+
+You'll do the semester project in VS Code, with an AI agent working beside your code and your files in your own GitHub repository. That's more setup than opening a chat window — but it's the version where you can actually see what the AI did to your analysis, and where the code survives the semester.
+
+The loop to remember:
+
+> **agent writes → you review → it runs → you check the output → you commit**
+
+## Reuse
+
+Materials are [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) and draw on [Thinking with Agents](https://eabeam.github.io/teaching-ai/), an open collection of AI modules for economists. Instructors: take whatever's useful — everything is plain markdown and LaTeX in [the repo](https://github.com/eabeam/umd-dev-econ-ai).

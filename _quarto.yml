@@ -1,0 +1,48 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - ai-policy.md
+    - setup/README.md
+    - templates/README.md
+    - materials/README.md
+    - materials/cleaning_decision_log.md
+    - materials/git_cheatsheet.md
+    - materials/good_commit_messages.md
+    - assignment/README.md
+  resources:
+    - "templates/*.do"
+    - "templates/AGENTS.md"
+    - "materials/econ_gitignore_template"
+
+website:
+  title: "AI-assisted research programming"
+  description: "Materials for the semester-long LSMS project — UMD graduate development economics, Fall 2026"
+  site-url: https://eabeam.github.io/umd-dev-econ-ai/
+  repo-url: https://github.com/eabeam/umd-dev-econ-ai
+  navbar:
+    background: "#1B4D5C"
+    left:
+      - text: "Setup"
+        href: setup/README.md
+      - text: "Templates"
+        href: templates/README.md
+      - text: "Materials"
+        href: materials/README.md
+      - text: "AI policy"
+        href: ai-policy.md
+      - text: "Assignment"
+        href: assignment/README.md
+    right:
+      - icon: github
+        href: https://github.com/eabeam/umd-dev-econ-ai
+        aria-label: GitHub
+  page-footer:
+    center: "CC-BY 4.0 · Emily Beam · draws on [Thinking with Agents](https://eabeam.github.io/teaching-ai/)"
+
+format:
+  html:
+    theme: [flatly, styles.scss]
+    toc: true
+    link-external-newwindow: true
