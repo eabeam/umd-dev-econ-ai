@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-eeee522e7649af5e0a4e30f84b7b4a23.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5eb9b7d2d88afdcd1b5f0da5d969c989.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -101,14 +101,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="../materials/README.html" aria-current="page"> 
 <span class="menu-text">Materials</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../ai-policy.html"> 
-<span class="menu-text">AI policy</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../assignment/README.html"> 
-<span class="menu-text">Assignment</span></a>
-  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -135,7 +127,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#materials" id="toc-materials" class="nav-link active" data-scroll-target="#materials">Materials</a>
   <ul class="collapse">
   <li><a href="#in-this-folder" id="toc-in-this-folder" class="nav-link" data-scroll-target="#in-this-folder">In this folder</a></li>
-  <li><a href="#curated-links" id="toc-curated-links" class="nav-link" data-scroll-target="#curated-links">Curated links</a></li>
+  <li><a href="#concepts" id="toc-concepts" class="nav-link" data-scroll-target="#concepts">Concepts</a></li>
+  <li><a href="#lsms" id="toc-lsms" class="nav-link" data-scroll-target="#lsms">LSMS</a></li>
+  <li><a href="#good-research-code" id="toc-good-research-code" class="nav-link" data-scroll-target="#good-research-code">Good research code</a></li>
+  <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools">Tools</a></li>
+  <li><a href="#more" id="toc-more" class="nav-link" data-scroll-target="#more">More</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -161,30 +157,71 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td><a href="../materials/cleaning_decision_log.html">Research decisions log</a></td>
-<td>Every assignment. Log each cleaning/construction choice — especially ones an AI agent made on your behalf.</td>
+<td>Every assignment. Log each cleaning/construction choice — and let the agent draft the entries: it made the changes, it writes them up, you review and correct. Documentation gets <em>cheaper</em> with an agent, not more burdensome.</td>
 </tr>
 <tr class="even">
-<td><a href="../materials/git_cheatsheet.html">Git cheat sheet</a></td>
-<td>Keep open until the commands are muscle memory.</td>
+<td><a href="../materials/git_in_vscode.html">Git in VS Code</a></td>
+<td>Finding your way around the Source Control panel — badges, diffs, commits, and the discard button.</td>
 </tr>
 <tr class="odd">
+<td><a href="../materials/git_cheatsheet.html">Git cheat sheet</a></td>
+<td>Keep open until the commands are muscle memory (or skip the memorizing — see below).</td>
+</tr>
+<tr class="even">
 <td><a href="../materials/good_commit_messages.html">Good commit messages</a></td>
 <td>When your history starts reading “stuff”, “more stuff”, “final”.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="econ_gitignore_template"><code>econ_gitignore_template</code></a></td>
 <td>Copy into your repo as <code>.gitignore</code> — keeps data files and log clutter out of Git.</td>
 </tr>
 </tbody>
 </table>
+<p>Three ways to drive Git, pick whichever sticks:</p>
+<ol type="1">
+<li><strong>VS Code’s Source Control panel</strong> — the guide above; everything is a button</li>
+<li><strong><a href="https://desktop.github.com/">GitHub Desktop</a></strong> — a friendly standalone app, nothing to memorize</li>
+<li><strong>Ask the agent</strong> — “commit this with a sensible message” works; you’ll still want to read what it committed</li>
+</ol>
 </section>
-<section id="curated-links" class="level2">
-<h2 class="anchored" data-anchor-id="curated-links">Curated links</h2>
-<p><strong>Concepts (Thinking with Agents modules — short, economics-native):</strong> - <a href="https://eabeam.github.io/teaching-ai/modules/b1-terminal-basics.html">Terminal Basics</a> — what a shell is and why reproducibility runs through it - <a href="https://eabeam.github.io/teaching-ai/modules/b2-git-github.html">Git &amp; GitHub Essentials</a> — version control from zero - <a href="https://eabeam.github.io/teaching-ai/modules/c2-code-assistance.html">AI Code Assistance</a> — when AI-generated code is dangerous - <a href="https://eabeam.github.io/teaching-ai/modules/c3-data-exploration.html">Data Exploration with AI</a> — guardrails for AI + data</p>
-<p><strong>LSMS:</strong> - <a href="https://microdata.worldbank.org/index.php/catalog/lsms">LSMS survey catalog</a> (microdata downloads) - <a href="https://www.worldbank.org/en/programs/lsms">LSMS program page</a> (documentation, guidebooks) - <a href="https://github.com/lsms-worldbank">LSMS team on GitHub</a> — survey tooling and the harmonized LSMS-ISA agricultural dataset - Working in R? The <a href="https://cran.r-project.org/package=nadaverse"><code>nadaverse</code></a> and <a href="https://github.com/mathiasweidinger/WBqueryR"><code>WBqueryR</code></a> packages talk to the Microdata Library’s catalog API — good for searching studies and pulling codebooks/file lists programmatically (a nice agent task). The data files themselves you download yourself, through your account and data-use agreement.</p>
-<p><strong>Good research code:</strong> - Gentzkow &amp; Shapiro, <a href="https://web.stanford.edu/~gentzkow/research/CodeAndData.pdf"><em>Code and Data for the Social Sciences: A Practitioner’s Guide</em></a> — the classic; short and worth reading in full</p>
-<p><strong>Tools:</strong> - <a href="https://developers.openai.com/codex/ide">Codex IDE extension docs</a> - <a href="https://education.github.com/pack">GitHub Student Developer Pack</a> (includes free Copilot)</p>
-<p><strong>More:</strong> - <a href="https://eabeam.github.io/teaching-ai/modules/resources.html">Thinking with Agents — resources page</a> — a living, annotated list of apps, academic tools, policies, and privacy notes; maintained beyond this course, so link there rather than here for anything current</p>
+<section id="concepts" class="level2">
+<h2 class="anchored" data-anchor-id="concepts">Concepts</h2>
+<p>Short, economics-native reads from <a href="https://eabeam.github.io/teaching-ai/">Thinking with Agents</a>:</p>
+<ul>
+<li><a href="https://eabeam.github.io/teaching-ai/modules/b1-terminal-basics.html">Terminal Basics</a> — what a shell is and why reproducibility runs through it</li>
+<li><a href="https://eabeam.github.io/teaching-ai/modules/b2-git-github.html">Git &amp; GitHub Essentials</a> — version control from zero</li>
+<li><a href="https://eabeam.github.io/teaching-ai/modules/c2-code-assistance.html">AI Code Assistance</a> — when AI-generated code is dangerous</li>
+<li><a href="https://eabeam.github.io/teaching-ai/modules/c3-data-exploration.html">Data Exploration with AI</a> — guardrails for AI + data</li>
+</ul>
+</section>
+<section id="lsms" class="level2">
+<h2 class="anchored" data-anchor-id="lsms">LSMS</h2>
+<ul>
+<li><a href="https://microdata.worldbank.org/index.php/catalog/lsms">LSMS survey catalog</a> — microdata downloads</li>
+<li><a href="https://www.worldbank.org/en/programs/lsms">LSMS program page</a> — documentation and guidebooks</li>
+<li><a href="https://github.com/lsms-worldbank">LSMS team on GitHub</a> — survey tooling and the harmonized LSMS-ISA agricultural dataset</li>
+<li>Working in R? The <a href="https://cran.r-project.org/package=nadaverse"><code>nadaverse</code></a> and <a href="https://github.com/mathiasweidinger/WBqueryR"><code>WBqueryR</code></a> packages talk to the Microdata Library’s catalog API — good for searching studies and pulling codebooks and file lists programmatically (a nice agent task). The data files themselves you download yourself, through your account and data-use agreement.</li>
+</ul>
+</section>
+<section id="good-research-code" class="level2">
+<h2 class="anchored" data-anchor-id="good-research-code">Good research code</h2>
+<ul>
+<li>Gentzkow &amp; Shapiro, <a href="https://web.stanford.edu/~gentzkow/research/CodeAndData.pdf"><em>Code and Data for the Social Sciences: A Practitioner’s Guide</em></a> — the classic; short and worth reading in full</li>
+</ul>
+</section>
+<section id="tools" class="level2">
+<h2 class="anchored" data-anchor-id="tools">Tools</h2>
+<ul>
+<li><a href="https://developers.openai.com/codex/ide">Codex IDE extension docs</a></li>
+<li><a href="https://education.github.com/pack">GitHub Student Developer Pack</a> — includes free Copilot</li>
+<li><a href="https://desktop.github.com/">GitHub Desktop</a></li>
+</ul>
+</section>
+<section id="more" class="level2">
+<h2 class="anchored" data-anchor-id="more">More</h2>
+<ul>
+<li><a href="https://eabeam.github.io/teaching-ai/modules/resources.html">Thinking with Agents — resources page</a> — a living, annotated list of apps, academic tools, policies, and privacy notes; maintained beyond this course, so link there rather than here for anything current</li>
+</ul>
 
 
 </section>

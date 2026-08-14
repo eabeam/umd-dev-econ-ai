@@ -52,9 +52,10 @@ git config --global user.email "you@umd.edu"
 1. Create an account at [github.com](https://github.com) **using your UMD email** (or add your UMD email to an existing account).
 2. Apply for the free **GitHub Student Developer Pack**: [education.github.com/pack](https://education.github.com/pack). Verification can take a few days — this is one of the two "start today" items. It includes **GitHub Copilot free for verified students** (AI autocomplete inside VS Code — different tool-fit from Codex; we'll cover when to use which in the lecture).
 3. Create **your own personal repository** for the course: on GitHub click **New repository** → name it something like `lsms-project` → **Private** → check "Add a README" → Create. This repo is *yours* — it outlives the course, and your submission at semester's end is simply its link.
-4. Connect it to your computer: in VS Code, open the Command Palette (`Cmd/Ctrl+Shift+P`) → type **"Git: Clone"** → paste your repo's URL → choose a folder you'll remember (e.g., `Documents/lsms-project`).
+4. **Share it with your instructor**: on your repo's page, **Settings → Collaborators → Add people** → her GitHub username (she'll send it). A private repo is invisible to everyone else — the link you submit only works once she's a collaborator.
+5. Connect it to your computer: in VS Code, open the Command Palette (`Cmd/Ctrl+Shift+P`) → type **"Git: Clone"** → paste your repo's URL → choose a folder you'll remember (e.g., `Documents/lsms-project`).
 
-*Want the concepts behind steps 3–4?* Short reads: [Terminal Basics](https://eabeam.github.io/teaching-ai/modules/b1-terminal-basics.html) and [Git & GitHub Essentials](https://eabeam.github.io/teaching-ai/modules/b2-git-github.html).
+*Want the concepts behind steps 3–5?* Short reads: [Terminal Basics](https://eabeam.github.io/teaching-ai/modules/b1-terminal-basics.html) and [Git & GitHub Essentials](https://eabeam.github.io/teaching-ai/modules/b2-git-github.html). And you never have to type Git commands if you don't want to: the [Source Control panel](../materials/git_in_vscode.md) is all buttons, [GitHub Desktop](https://desktop.github.com/) is a friendly standalone app, and the agent will happily drive Git for you.
 
 ## 5. World Bank microdata account (start today)
 

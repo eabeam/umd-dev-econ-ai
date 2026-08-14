@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://eabeam.github.io/umd-dev-econ-ai/assignment/README.html</loc>
-    <lastmod>2026-08-14T14:28:59.316Z</lastmod>
+    <loc>https://eabeam.github.io/umd-dev-econ-ai/materials/good_commit_messages.html</loc>
+    <lastmod>2026-08-14T14:27:02.562Z</lastmod>
   </url>
   <url>
     <loc>https://eabeam.github.io/umd-dev-econ-ai/materials/git_cheatsheet.html</loc>
@@ -10,19 +10,15 @@
   </url>
   <url>
     <loc>https://eabeam.github.io/umd-dev-econ-ai/materials/README.html</loc>
-    <lastmod>2026-08-14T14:53:27.033Z</lastmod>
+    <lastmod>2026-08-14T16:01:20.724Z</lastmod>
   </url>
   <url>
     <loc>https://eabeam.github.io/umd-dev-econ-ai/setup/README.html</loc>
-    <lastmod>2026-08-14T14:53:10.374Z</lastmod>
+    <lastmod>2026-08-14T16:02:12.021Z</lastmod>
   </url>
   <url>
     <loc>https://eabeam.github.io/umd-dev-econ-ai/index.html</loc>
-    <lastmod>2026-08-14T15:55:34.052Z</lastmod>
-  </url>
-  <url>
-    <loc>https://eabeam.github.io/umd-dev-econ-ai/ai-policy.html</loc>
-    <lastmod>2026-08-14T14:28:00.012Z</lastmod>
+    <lastmod>2026-08-14T16:02:34.786Z</lastmod>
   </url>
   <url>
     <loc>https://eabeam.github.io/umd-dev-econ-ai/templates/README.html</loc>
@@ -33,7 +29,7 @@
     <lastmod>2026-08-14T14:29:01.701Z</lastmod>
   </url>
   <url>
-    <loc>https://eabeam.github.io/umd-dev-econ-ai/materials/good_commit_messages.html</loc>
-    <lastmod>2026-08-14T14:27:02.562Z</lastmod>
+    <loc>https://eabeam.github.io/umd-dev-econ-ai/materials/git_in_vscode.html</loc>
+    <lastmod>2026-08-14T16:01:42.492Z</lastmod>
   </url>
 </urlset>

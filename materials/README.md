@@ -6,31 +6,44 @@ Cheat sheets and curated links for the semester project. Everything here is your
 
 | File | When to use it |
 |---|---|
-| [Research decisions log](cleaning_decision_log.md) | Every assignment. Log each cleaning/construction choice — especially ones an AI agent made on your behalf. |
-| [Git cheat sheet](git_cheatsheet.md) | Keep open until the commands are muscle memory. |
+| [Research decisions log](cleaning_decision_log.md) | Every assignment. Log each cleaning/construction choice — and let the agent draft the entries: it made the changes, it writes them up, you review and correct. Documentation gets *cheaper* with an agent, not more burdensome. |
+| [Git in VS Code](git_in_vscode.md) | Finding your way around the Source Control panel — badges, diffs, commits, and the discard button. |
+| [Git cheat sheet](git_cheatsheet.md) | Keep open until the commands are muscle memory (or skip the memorizing — see below). |
 | [Good commit messages](good_commit_messages.md) | When your history starts reading "stuff", "more stuff", "final". |
 | [`econ_gitignore_template`](econ_gitignore_template) | Copy into your repo as `.gitignore` — keeps data files and log clutter out of Git. |
 
-## Curated links
+Three ways to drive Git, pick whichever sticks:
 
-**Concepts (Thinking with Agents modules — short, economics-native):**
+1. **VS Code's Source Control panel** — the guide above; everything is a button
+2. **[GitHub Desktop](https://desktop.github.com/)** — a friendly standalone app, nothing to memorize
+3. **Ask the agent** — "commit this with a sensible message" works; you'll still want to read what it committed
+
+## Concepts
+
+Short, economics-native reads from [Thinking with Agents](https://eabeam.github.io/teaching-ai/):
+
 - [Terminal Basics](https://eabeam.github.io/teaching-ai/modules/b1-terminal-basics.html) — what a shell is and why reproducibility runs through it
 - [Git & GitHub Essentials](https://eabeam.github.io/teaching-ai/modules/b2-git-github.html) — version control from zero
 - [AI Code Assistance](https://eabeam.github.io/teaching-ai/modules/c2-code-assistance.html) — when AI-generated code is dangerous
 - [Data Exploration with AI](https://eabeam.github.io/teaching-ai/modules/c3-data-exploration.html) — guardrails for AI + data
 
-**LSMS:**
-- [LSMS survey catalog](https://microdata.worldbank.org/index.php/catalog/lsms) (microdata downloads)
-- [LSMS program page](https://www.worldbank.org/en/programs/lsms) (documentation, guidebooks)
-- [LSMS team on GitHub](https://github.com/lsms-worldbank) — survey tooling and the harmonized LSMS-ISA agricultural dataset
-- Working in R? The [`nadaverse`](https://cran.r-project.org/package=nadaverse) and [`WBqueryR`](https://github.com/mathiasweidinger/WBqueryR) packages talk to the Microdata Library's catalog API — good for searching studies and pulling codebooks/file lists programmatically (a nice agent task). The data files themselves you download yourself, through your account and data-use agreement.
+## LSMS
 
-**Good research code:**
+- [LSMS survey catalog](https://microdata.worldbank.org/index.php/catalog/lsms) — microdata downloads
+- [LSMS program page](https://www.worldbank.org/en/programs/lsms) — documentation and guidebooks
+- [LSMS team on GitHub](https://github.com/lsms-worldbank) — survey tooling and the harmonized LSMS-ISA agricultural dataset
+- Working in R? The [`nadaverse`](https://cran.r-project.org/package=nadaverse) and [`WBqueryR`](https://github.com/mathiasweidinger/WBqueryR) packages talk to the Microdata Library's catalog API — good for searching studies and pulling codebooks and file lists programmatically (a nice agent task). The data files themselves you download yourself, through your account and data-use agreement.
+
+## Good research code
+
 - Gentzkow & Shapiro, [*Code and Data for the Social Sciences: A Practitioner's Guide*](https://web.stanford.edu/~gentzkow/research/CodeAndData.pdf) — the classic; short and worth reading in full
 
-**Tools:**
-- [Codex IDE extension docs](https://developers.openai.com/codex/ide)
-- [GitHub Student Developer Pack](https://education.github.com/pack) (includes free Copilot)
+## Tools
 
-**More:**
+- [Codex IDE extension docs](https://developers.openai.com/codex/ide)
+- [GitHub Student Developer Pack](https://education.github.com/pack) — includes free Copilot
+- [GitHub Desktop](https://desktop.github.com/)
+
+## More
+
 - [Thinking with Agents — resources page](https://eabeam.github.io/teaching-ai/modules/resources.html) — a living, annotated list of apps, academic tools, policies, and privacy notes; maintained beyond this course, so link there rather than here for anything current

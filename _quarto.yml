@@ -3,14 +3,13 @@ project:
   output-dir: docs
   render:
     - index.qmd
-    - ai-policy.md
     - setup/README.md
     - templates/README.md
     - materials/README.md
     - materials/cleaning_decision_log.md
     - materials/git_cheatsheet.md
+    - materials/git_in_vscode.md
     - materials/good_commit_messages.md
-    - assignment/README.md
   resources:
     - "templates/*.do"
     - "templates/AGENTS.md"
@@ -30,10 +29,6 @@ website:
         href: templates/README.md
       - text: "Materials"
         href: materials/README.md
-      - text: "AI policy"
-        href: ai-policy.md
-      - text: "Assignment"
-        href: assignment/README.md
     right:
       - icon: github
         href: https://github.com/eabeam/umd-dev-econ-ai
