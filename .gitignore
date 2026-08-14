@@ -92,3 +92,13 @@ desktop.ini
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+
+# LaTeX build artifacts
+*.aux
+*.nav
+*.out
+*.snm
+*.toc
+*.synctex.gz
+slides/*.log
+slides/*.pdf
