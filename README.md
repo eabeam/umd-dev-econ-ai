@@ -1,23 +1,24 @@
-# AI-Assisted Research Programming — UMD Graduate Development Economics (Fall 2026)
+# AI-assisted research programming
 
-Materials supporting the semester-long LSMS empirical project in the graduate development economics course at the University of Maryland, with a guest module by [Emily Beam](https://www.uvm.edu/cas/economics) (University of Vermont) on good research programming with AI agents.
+**UMD graduate development economics · Fall 2026**
+
+This repo holds the materials for the AI and programming side of the semester-long LSMS project — a guest module by [Emily Beam](https://www.uvm.edu/cas/economics) (University of Vermont). Everything here is built to outlast the course: the setup, the habits, and the code you write are yours to keep.
 <!-- TODO(Emily): add instructor name with her OK -->
-
 
 ## Start here
 
-| If you are... | Go to |
+| If you're... | Go to |
 |---|---|
-| A student setting up before the semester | **[Setup guide](setup/README.md)** — do this before the first class (Aug 31). Start today: one step involves a World Bank approval that can take days. |
-| Looking for the lecture slides | [`slides/`](slides/) — posted before Aug 31 |
-| Looking for templates and cheat sheets | [`materials/`](materials/README.md) — Git cheat sheet, research decisions log, `.gitignore` for econ projects, and curated links |
-| Checking the AI-use rules | [AI policy](ai-policy.md) |
-| Looking for the assignment | [`assignment/`](assignment/README.md) — assignment is distributed via ELMS; this folder holds supporting notes |
+| Setting up before the semester | **[Setup guide](setup/README.md)** — do this before the first class (August 31). Start today: one step needs a World Bank approval that takes days, not minutes. |
+| Looking for the lecture slides | [`slides/`](slides/) — posted before August 31 |
+| Looking for templates and cheat sheets | [`materials/`](materials/README.md) — Git cheat sheet, research decisions log, a `.gitignore` for econ projects, and links worth your time |
+| Checking the AI rules | [AI policy](ai-policy.md) |
+| Looking for the assignment | [`assignment/`](assignment/README.md) — the assignment itself lives on ELMS; this folder has supporting notes |
 
-## The workflow this course teaches
+## The workflow
 
-You'll do the semester project in **VS Code with an AI agent working beside your code**, with your files under version control in your **own personal GitHub repository**. This is more setup than opening a chat window, but it's the setup that lets you *see and verify* what AI does to your analysis — and the code and habits stay with you after the course ends.
+You'll do the semester project in VS Code, with an AI agent working beside your code and your files in your own GitHub repository. That's more setup than opening a chat window — but it's the version where you can actually see what the AI did to your analysis, and where the code survives the semester.
 
 ## Reuse
 
-These materials are shared under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) and draw on [Thinking with Agents](https://eabeam.github.io/teaching-ai/), an open collection of AI-literacy modules for economists. Instructors: take what's useful, attribution appreciated.
+Materials are [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) and draw on [Thinking with Agents](https://eabeam.github.io/teaching-ai/), an open collection of AI modules for economists. Instructors: take whatever's useful.

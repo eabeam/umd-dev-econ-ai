@@ -1,8 +1,8 @@
-# Setup Guide — Do This Before August 31
+# Setup guide — do this before August 31
 
-Everything here is one-time setup so that class time goes to actual work. Budget **about an hour**, plus waiting time for two approvals (steps 4 and 5) that are out of your hands — **start those today**.
+Everything here is one-time setup, so class time can go to actual work. Budget **about an hour**, plus waiting time for two approvals (steps 4 and 5) that are out of your hands — **start those today**.
 
-If you get stuck, note where and move on; bring the sticking point to the first session.
+Getting stuck somewhere is normal — note where, move on, and bring it to the first session.
 
 ## Checklist
 
@@ -11,7 +11,7 @@ If you get stuck, note where and move on; bring the sticking point to the first 
 - [ ] 3. Git installed
 - [ ] 4. GitHub account + free student benefits + your personal course repo
 - [ ] 5. World Bank microdata account (start today — approval lag)
-- [ ] 6. Five-minute smoke test
+- [ ] 6. The five-minute test
 
 ---
 
@@ -66,19 +66,24 @@ Assignment 1 requires downloading an LSMS survey, which requires a (free) World 
 
 Background on the program: [worldbank.org/en/programs/lsms](https://www.worldbank.org/en/programs/lsms)
 
-## 6. Five-minute smoke test
+## 6. The five-minute test
 
-You're done when all of these work:
+You're done when all four of these work:
 
 1. Open your cloned course repo folder in VS Code (**File → Open Folder**).
 2. Open the Codex panel and ask: *"Create a file called `hello.do` that displays 'setup works'."* Watch it propose the file; accept the change.
 3. Run the file in Stata (or your package of choice) — confirm it runs.
 4. Commit and push: in VS Code's **Source Control** panel (left sidebar), type a message like `test: setup works`, click **Commit**, then **Sync/Push**. Refresh your repo page on GitHub — `hello.do` should be there.
 
-If all four worked, you have the entire semester's workflow in miniature: **agent writes → you review → you run → you commit.**
+If all four worked, that's the entire semester's workflow in miniature: **agent writes → you review → it runs → you check the output → you commit.** See you August 31!
 
 ---
 
 ## A note on Stata
 
-Stata stays our default language (matching your econometrics sequence), and no AI agent "runs" Stata for you. The loop is: the agent edits `.do` files in your repo folder; *you* run them in Stata; if something breaks, paste the error or log back to the agent. You may use R, Python, or anything else — the workflow is identical.
+Stata stays our default language (matching your econometrics sequence), and it plays nicely with this workflow. Two ways to run your code, and you'll use both:
+
+- **You run it**: open the `.do` file in Stata as usual. Good when you're exploring interactively.
+- **The agent runs it**: Stata has a batch mode (`stata-mp -b do myfile.do` from the terminal), which writes a `.log` file — so the agent can run your do-file, read the log, and fix its own errors. We'll set this up together in the first session if it doesn't work out of the box on your machine.
+
+Either way, the part that can't be delegated is the same: *you* read the output and decide whether it's right. (You may also use R, Python, or anything else — the workflow is identical, minus the batch-mode wrinkle.)
