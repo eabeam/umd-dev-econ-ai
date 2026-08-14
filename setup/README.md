@@ -79,6 +79,16 @@ If all four worked, that's the entire semester's workflow in miniature: **agent 
 
 ---
 
+## Nice extras (optional, five minutes)
+
+VS Code earns its keep beyond the agent. Worth installing while you're in the Extensions marketplace:
+
+- **LaTeX Workshop** — compile your papers in the same window as your code (the agent can edit `.tex` files too)
+- A **Stata** syntax-highlighting extension — search "Stata," pick the popular one
+- Markdown preview is built in — open any `.md` file and press `Cmd/Ctrl+Shift+V`
+
+---
+
 ## A note on Stata
 
 Stata stays our default language (matching your econometrics sequence), and it plays nicely with this workflow. Two ways to run your code, and you'll use both:

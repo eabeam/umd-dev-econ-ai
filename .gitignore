@@ -102,3 +102,4 @@ __pycache__/
 *.synctex.gz
 slides/*.log
 slides/*.pdf
+config_local.do

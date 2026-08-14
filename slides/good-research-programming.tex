@@ -101,6 +101,21 @@
   },
 }
 
+% Pop-out aside: a little conversation box in the bottom-right corner,
+% for the parenthetical remarks that don't belong in the body.
+% Usage: \aside{text}  or  \aside[5cm]{longer text}
+\newcommand{\aside}[2][4.2cm]{%
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=south east, xshift=-1.5cm, yshift=0.85cm, rotate=1.5,
+        draw=UVMGold, fill=LightGold, rounded corners=4pt, line width=0.8pt,
+        text=DeepCharcoal, font=\footnotesize\itshape, align=left,
+        text width=#1, inner sep=7pt,
+        drop shadow={shadow xshift=1.5pt, shadow yshift=-1.5pt, opacity=0.25}]
+    (asidebox) at (current page.south east) {#2};
+  \node[anchor=south west, text=UVMGold, font=\small]
+    at ([xshift=2pt, yshift=-2pt]asidebox.north west) {\faCommentDots};
+\end{tikzpicture}}
+
 % Section divider helper
 \newcommand{\divider}[2]{%
 {\setbeamertemplate{footline}{}%
@@ -350,28 +365,48 @@ gen foodexp\_pc = foodexp\_hh /\\
   \item Agents inherit your standards. Messy repo in, messy code out.
 \end{itemize}
 
+\aside{November-you has no memory of August-you. None.}
+
 \end{frame}
 
 %% ====== 3. GIT ======
 \divider{Git in fifteen minutes}{a lab notebook for your code}
 
-\begin{frame}[fragile]{Why version control}
+\begin{frame}{Git: Dropbox with perfect version control}
 
-\begin{tcolorbox}[codebox]
-\color{white}\footnotesize\ttfamily
-analysis\_final.do\\
-analysis\_final\_v2.do\\
-analysis\_final\_v2\_REAL.do\\
-analysis\_final\_v2\_REAL\_use\_this\_one.do
+You already use the pieces --- Git puts them together, for code:
+
+\vspace{0.15cm}
+
+\begin{columns}[T]
+\begin{column}{0.31\textwidth}
+\begin{tcolorbox}[keybox, title={\faCloud\quad Like Dropbox}]
+\footnotesize
+Your project, backed up and synced\\[4pt]
+But a version saves \textbf{when you say so}, with a label --- and no version ever overwrites another. (No more \texttt{final\_v2\_REAL.do}.)
 \end{tcolorbox}
+\end{column}
+\begin{column}{0.31\textwidth}
+\begin{tcolorbox}[keybox, title={\faEdit\quad Like track changes}]
+\footnotesize
+Every edit shows up as a \textbf{diff}: what changed, who changed it, and --- if the message is good --- why\\[4pt]
+Accept or reject, same as in Word
+\end{tcolorbox}
+\end{column}
+\begin{column}{0.31\textwidth}
+\begin{tcolorbox}[keybox, title={\faCodeBranch\quad Plus branches}]
+\footnotesize
+The genuinely new trick: a \textbf{parallel copy} of the whole project\\[4pt]
+Try the risky idea there; merge it back if it works (delete it quietly if it doesn't)
+\end{tcolorbox}
+\end{column}
+\end{columns}
 
 \vspace{0.3cm}
 
-\begin{itemize}
-  \item We've all been there. Git replaces this with \textbf{one file and a history}
-  \item Every commit is a snapshot: what changed, when, and (if you write good messages) why
-  \item When an agent is editing your files, that history is your \textbf{audit trail}
-\end{itemize}
+\begin{tcolorbox}[accentbox]
+\small This is also how you stay \textbf{in control of an agent}: in a plain folder, its edits just happen --- in Git, they arrive as diffs \textbf{you} review. And it's how every co-authored code base survives. Worth the skill.
+\end{tcolorbox}
 
 \end{frame}
 
@@ -392,6 +427,27 @@ git log\hspace{3.9em}{\color{CoolGray}see the story so far}
   \item Commit \textbf{when a thing works}: after each table, after each cleaning step (not once a month)
   \item Message guide and cheat sheet are in the class repo --- keep the cheat sheet open for a few weeks
 \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Your undo button: Git while the agent works}
+
+\begin{itemize}
+  \item Every file the agent touches shows up marked in the \textbf{Source Control panel} --- click it for a side-by-side diff of exactly what changed
+  \item \textbf{Commit before} handing the agent a big task --- a clean checkpoint turns \emph{Discard All Changes} into a real undo button
+  \item Agent went sideways? Discard, sharpen the prompt, run it again
+  \item \textbf{Commit after} each thing that works --- small commits keep agent work reviewable
+\end{itemize}
+
+\vspace{0.3cm}
+
+\begin{tcolorbox}[accentbox]
+\centering
+The rhythm: \textbf{checkpoint $\to$ delegate $\to$ read the diff $\to$ keep or discard.}\\[3pt]
+You are never stuck with what the agent did.
+\end{tcolorbox}
+
+\aside{Discarding isn't defeat --- it's cheaper than repair.}
 
 \end{frame}
 
@@ -469,6 +525,28 @@ Highlight code, ask the panel: explain this, fix this\\[4pt]
   \item One window: the panel, the ghost text, and the terminal all live in VS Code
   \item Different tools sit on different rungs --- Copilot low, Codex high --- but the rungs are what matter
 \end{itemize}
+
+\end{frame}
+
+\begin{frame}{While you're in VS Code anyway}
+
+Not AI --- just things the same window does well:
+
+\vspace{0.15cm}
+
+\begin{itemize}
+  \item \textbf{LaTeX} --- the LaTeX Workshop extension compiles your paper right next to your code (and yes, the agent can edit \texttt{.tex} too)
+  \item \textbf{Markdown preview} --- your README and decisions log, rendered as you type
+  \item \textbf{Stata syntax highlighting} --- search the extensions marketplace for ``Stata''
+  \item \textbf{Project-wide search} --- every file, one keystroke (where did I define \texttt{foodexp\_pc}?)
+\end{itemize}
+
+\vspace{0.3cm}
+
+\begin{tcolorbox}[accentbox]
+\centering
+The point isn't any one feature --- it's that your \textbf{whole project} lives in one place the agent can also see.
+\end{tcolorbox}
 
 \end{frame}
 
