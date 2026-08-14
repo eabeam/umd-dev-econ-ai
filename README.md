@@ -1,6 +1,6 @@
 # AI-assisted research programming
 
-**UMD graduate development economics · Fall 2026**
+**UMD graduate development economics · Fall 2026** · 📖 **[Course site](https://eabeam.github.io/umd-dev-econ-ai/)**
 
 This repo holds the materials for the AI and programming side of the semester-long LSMS project — a guest module by [Emily Beam](https://www.uvm.edu/cas/economics) (University of Vermont). Everything here is built to outlast the course: the setup, the habits, and the code you write are yours to keep.
 <!-- TODO(Emily): add instructor name with her OK -->
