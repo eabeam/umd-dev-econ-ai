@@ -9,7 +9,7 @@ This repo holds the materials for the AI and programming side of the semester-lo
 
 | If you're... | Go to |
 |---|---|
-| Setting up before the semester | **[Setup guide](setup/README.md)** — do this before the first class (August 31). Start today: one step needs a World Bank approval that takes days, not minutes. |
+| Setting up before the semester | **[Setup guide](setup/README.md)** — do this before the first class (August 31). Start early: the GitHub student-benefits verification can take a few days. |
 | Looking for the lecture slides | [`slides/`](slides/) — posted before August 31 |
 | Looking for templates and cheat sheets | [`templates/`](templates/README.md) — config pattern, cleaning/analysis skeletons, `AGENTS.md` house rules — and [`materials/`](materials/README.md) — Git cheat sheet, decisions log, links worth your time |
 | Looking for the assignment or AI policy | ELMS — those are the course's, not this repo's. [`assignment/`](assignment/README.md) has a few getting-started notes. |

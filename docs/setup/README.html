@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5eb9b7d2d88afdcd1b5f0da5d969c989.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-31a6999a1cd95299d168b9b1050b34af.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -166,7 +166,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#vs-code-the-codex-extension" id="toc-vs-code-the-codex-extension" class="nav-link" data-scroll-target="#vs-code-the-codex-extension">2. VS Code + the Codex extension</a></li>
   <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git">3. Git</a></li>
   <li><a href="#github-account-student-benefits-and-your-course-repo" id="toc-github-account-student-benefits-and-your-course-repo" class="nav-link" data-scroll-target="#github-account-student-benefits-and-your-course-repo">4. GitHub account, student benefits, and your course repo</a></li>
-  <li><a href="#world-bank-microdata-account-start-today" id="toc-world-bank-microdata-account-start-today" class="nav-link" data-scroll-target="#world-bank-microdata-account-start-today">5. World Bank microdata account (start today)</a></li>
+  <li><a href="#world-bank-microdata-account" id="toc-world-bank-microdata-account" class="nav-link" data-scroll-target="#world-bank-microdata-account">5. World Bank microdata account</a></li>
   <li><a href="#the-five-minute-test" id="toc-the-five-minute-test" class="nav-link" data-scroll-target="#the-five-minute-test">6. The five-minute test</a></li>
   <li><a href="#nice-extras-optional-five-minutes" id="toc-nice-extras-optional-five-minutes" class="nav-link" data-scroll-target="#nice-extras-optional-five-minutes">Nice extras (optional, five minutes)</a></li>
   <li><a href="#a-note-on-stata" id="toc-a-note-on-stata" class="nav-link" data-scroll-target="#a-note-on-stata">A note on Stata</a></li>
@@ -182,7 +182,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="setup-guide-do-this-before-august-31" class="level1">
 <h1>Setup guide — do this before August 31</h1>
-<p>Everything here is one-time setup, so class time can go to actual work. Budget <strong>about an hour</strong>, plus waiting time for two approvals (steps 4 and 5) that are out of your hands — <strong>start those today</strong>.</p>
+<p>Everything here is one-time setup, so class time can go to actual work. Budget <strong>about an hour</strong>, plus a few days’ wait for the GitHub student-benefits verification (step 4), which is out of your hands — <strong>start that one today</strong>.</p>
 <p>Getting stuck somewhere is normal — note where, move on, and bring it to the first session.</p>
 <section id="checklist" class="level2">
 <h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
@@ -191,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><label><input type="checkbox">2. VS Code installed, Codex extension working</label></li>
 <li><label><input type="checkbox">3. Git installed</label></li>
 <li><label><input type="checkbox">4. GitHub account + free student benefits + your personal course repo</label></li>
-<li><label><input type="checkbox">5. World Bank microdata account (start today — approval lag)</label></li>
+<li><label><input type="checkbox">5. World Bank microdata account</label></li>
 <li><label><input type="checkbox">6. The five-minute test</label></li>
 </ul>
 <hr>
@@ -230,20 +230,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="github-account-student-benefits-and-your-course-repo">4. GitHub account, student benefits, and your course repo</h2>
 <ol type="1">
 <li>Create an account at <a href="https://github.com">github.com</a> <strong>using your UMD email</strong> (or add your UMD email to an existing account).</li>
-<li>Apply for the free <strong>GitHub Student Developer Pack</strong>: <a href="https://education.github.com/pack">education.github.com/pack</a>. Verification can take a few days — this is one of the two “start today” items. It includes <strong>GitHub Copilot free for verified students</strong> (AI autocomplete inside VS Code — different tool-fit from Codex; we’ll cover when to use which in the lecture).</li>
+<li>Apply for the free <strong>GitHub Student Developer Pack</strong>: <a href="https://education.github.com/pack">education.github.com/pack</a>. Verification can take a few days — this is the one “start today” item. It includes <strong>GitHub Copilot free for verified students</strong> (AI autocomplete inside VS Code — different tool-fit from Codex; we’ll cover when to use which in the lecture).</li>
 <li>Create <strong>your own personal repository</strong> for the course: on GitHub click <strong>New repository</strong> → name it something like <code>lsms-project</code> → <strong>Private</strong> → check “Add a README” → Create. This repo is <em>yours</em> — it outlives the course, and your submission at semester’s end is simply its link.</li>
 <li><strong>Share it with your instructor</strong>: on your repo’s page, <strong>Settings → Collaborators → Add people</strong> → her GitHub username (she’ll send it). A private repo is invisible to everyone else — the link you submit only works once she’s a collaborator.</li>
 <li>Connect it to your computer: in VS Code, open the Command Palette (<code>Cmd/Ctrl+Shift+P</code>) → type <strong>“Git: Clone”</strong> → paste your repo’s URL → choose a folder you’ll remember (e.g., <code>Documents/lsms-project</code>).</li>
 </ol>
 <p><em>Want the concepts behind steps 3–5?</em> Short reads: <a href="https://eabeam.github.io/teaching-ai/modules/b1-terminal-basics.html">Terminal Basics</a> and <a href="https://eabeam.github.io/teaching-ai/modules/b2-git-github.html">Git &amp; GitHub Essentials</a>. And you never have to type Git commands if you don’t want to: the <a href="../materials/git_in_vscode.html">Source Control panel</a> is all buttons, <a href="https://desktop.github.com/">GitHub Desktop</a> is a friendly standalone app, and the agent will happily drive Git for you.</p>
 </section>
-<section id="world-bank-microdata-account-start-today" class="level2">
-<h2 class="anchored" data-anchor-id="world-bank-microdata-account-start-today">5. World Bank microdata account (start today)</h2>
-<p>Assignment 1 requires downloading an LSMS survey, which requires a (free) World Bank microdata account and a data-use agreement — and approval is not instant.</p>
+<section id="world-bank-microdata-account" class="level2">
+<h2 class="anchored" data-anchor-id="world-bank-microdata-account">5. World Bank microdata account</h2>
+<p>Assignment 1 uses an LSMS survey, which you download through a free World Bank microdata account. Access is granted per survey: once you’ve picked a country-year, you request access to that survey’s files (a short form, approved instantly).</p>
 <ol type="1">
 <li>Go to the LSMS catalog: <a href="https://microdata.worldbank.org/index.php/catalog/lsms">microdata.worldbank.org/index.php/catalog/lsms</a></li>
 <li>Create an account (top right).</li>
-<li>Browse surveys now if you like (choose a country-year with a full household module — details in Assignment 1), but at minimum <strong>get the account created</strong> so the data-use agreement is the only step left when you pick.</li>
+<li>When you’ve chosen a survey (a country-year with a full household module — details in Assignment 1), open its page, click <strong>Get Microdata</strong>, and request access to the files.</li>
 </ol>
 <p>Background on the program: <a href="https://www.worldbank.org/en/programs/lsms">worldbank.org/en/programs/lsms</a></p>
 </section>
@@ -274,7 +274,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Stata stays our default language (matching your econometrics sequence), and it plays nicely with this workflow. Two ways to run your code, and you’ll use both:</p>
 <ul>
 <li><strong>You run it</strong>: open the <code>.do</code> file in Stata as usual. Good when you’re exploring interactively.</li>
-<li><strong>The agent runs it</strong>: Stata has a batch mode (<code>stata-mp -b do myfile.do</code> from the terminal), which writes a <code>.log</code> file — so the agent can run your do-file, read the log, and fix its own errors. We’ll set this up together in the first session if it doesn’t work out of the box on your machine.</li>
+<li><strong>The agent runs it</strong>: Stata has a batch mode (<code>stata-mp -b do myfile.do</code> from the terminal), which writes a <code>.log</code> file — so the agent can run your do-file, read the log, and fix its own errors.</li>
 </ul>
 <p>Either way, the part that can’t be delegated is the same: <em>you</em> read the output and decide whether it’s right. (You may also use R, Python, or anything else — the workflow is identical, minus the batch-mode wrinkle.)</p>
 

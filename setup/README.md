@@ -1,6 +1,6 @@
 # Setup guide — do this before August 31
 
-Everything here is one-time setup, so class time can go to actual work. Budget **about an hour**, plus waiting time for two approvals (steps 4 and 5) that are out of your hands — **start those today**.
+Everything here is one-time setup, so class time can go to actual work. Budget **about an hour**, plus a few days' wait for the GitHub student-benefits verification (step 4), which is out of your hands — **start that one today**.
 
 Getting stuck somewhere is normal — note where, move on, and bring it to the first session.
 
@@ -10,7 +10,7 @@ Getting stuck somewhere is normal — note where, move on, and bring it to the f
 - [ ] 2. VS Code installed, Codex extension working
 - [ ] 3. Git installed
 - [ ] 4. GitHub account + free student benefits + your personal course repo
-- [ ] 5. World Bank microdata account (start today — approval lag)
+- [ ] 5. World Bank microdata account
 - [ ] 6. The five-minute test
 
 ---
@@ -50,20 +50,20 @@ git config --global user.email "you@umd.edu"
 ## 4. GitHub account, student benefits, and your course repo
 
 1. Create an account at [github.com](https://github.com) **using your UMD email** (or add your UMD email to an existing account).
-2. Apply for the free **GitHub Student Developer Pack**: [education.github.com/pack](https://education.github.com/pack). Verification can take a few days — this is one of the two "start today" items. It includes **GitHub Copilot free for verified students** (AI autocomplete inside VS Code — different tool-fit from Codex; we'll cover when to use which in the lecture).
+2. Apply for the free **GitHub Student Developer Pack**: [education.github.com/pack](https://education.github.com/pack). Verification can take a few days — this is the one "start today" item. It includes **GitHub Copilot free for verified students** (AI autocomplete inside VS Code — different tool-fit from Codex; we'll cover when to use which in the lecture).
 3. Create **your own personal repository** for the course: on GitHub click **New repository** → name it something like `lsms-project` → **Private** → check "Add a README" → Create. This repo is *yours* — it outlives the course, and your submission at semester's end is simply its link.
 4. **Share it with your instructor**: on your repo's page, **Settings → Collaborators → Add people** → her GitHub username (she'll send it). A private repo is invisible to everyone else — the link you submit only works once she's a collaborator.
 5. Connect it to your computer: in VS Code, open the Command Palette (`Cmd/Ctrl+Shift+P`) → type **"Git: Clone"** → paste your repo's URL → choose a folder you'll remember (e.g., `Documents/lsms-project`).
 
 *Want the concepts behind steps 3–5?* Short reads: [Terminal Basics](https://eabeam.github.io/teaching-ai/modules/b1-terminal-basics.html) and [Git & GitHub Essentials](https://eabeam.github.io/teaching-ai/modules/b2-git-github.html). And you never have to type Git commands if you don't want to: the [Source Control panel](../materials/git_in_vscode.md) is all buttons, [GitHub Desktop](https://desktop.github.com/) is a friendly standalone app, and the agent will happily drive Git for you.
 
-## 5. World Bank microdata account (start today)
+## 5. World Bank microdata account
 
-Assignment 1 requires downloading an LSMS survey, which requires a (free) World Bank microdata account and a data-use agreement — and approval is not instant.
+Assignment 1 uses an LSMS survey, which you download through a free World Bank microdata account. Access is granted per survey: once you've picked a country-year, you request access to that survey's files (a short form, approved instantly).
 
 1. Go to the LSMS catalog: [microdata.worldbank.org/index.php/catalog/lsms](https://microdata.worldbank.org/index.php/catalog/lsms)
 2. Create an account (top right).
-3. Browse surveys now if you like (choose a country-year with a full household module — details in Assignment 1), but at minimum **get the account created** so the data-use agreement is the only step left when you pick.
+3. When you've chosen a survey (a country-year with a full household module — details in Assignment 1), open its page, click **Get Microdata**, and request access to the files.
 
 Background on the program: [worldbank.org/en/programs/lsms](https://www.worldbank.org/en/programs/lsms)
 
@@ -95,6 +95,6 @@ VS Code earns its keep beyond the agent. Worth installing while you're in the Ex
 Stata stays our default language (matching your econometrics sequence), and it plays nicely with this workflow. Two ways to run your code, and you'll use both:
 
 - **You run it**: open the `.do` file in Stata as usual. Good when you're exploring interactively.
-- **The agent runs it**: Stata has a batch mode (`stata-mp -b do myfile.do` from the terminal), which writes a `.log` file — so the agent can run your do-file, read the log, and fix its own errors. We'll set this up together in the first session if it doesn't work out of the box on your machine.
+- **The agent runs it**: Stata has a batch mode (`stata-mp -b do myfile.do` from the terminal), which writes a `.log` file — so the agent can run your do-file, read the log, and fix its own errors.
 
 Either way, the part that can't be delegated is the same: *you* read the output and decide whether it's right. (You may also use R, Python, or anything else — the workflow is identical, minus the batch-mode wrinkle.)

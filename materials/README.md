@@ -32,7 +32,7 @@ Short, economics-native reads from [Thinking with Agents](https://eabeam.github.
 - [LSMS survey catalog](https://microdata.worldbank.org/index.php/catalog/lsms) — microdata downloads
 - [LSMS program page](https://www.worldbank.org/en/programs/lsms) — documentation and guidebooks
 - [LSMS team on GitHub](https://github.com/lsms-worldbank) — survey tooling and the harmonized LSMS-ISA agricultural dataset
-- Working in R? The [`nadaverse`](https://cran.r-project.org/package=nadaverse) and [`WBqueryR`](https://github.com/mathiasweidinger/WBqueryR) packages talk to the Microdata Library's catalog API — good for searching studies and pulling codebooks and file lists programmatically (a nice agent task). The data files themselves you download yourself, through your account and data-use agreement.
+- Working in R? The [`nadaverse`](https://cran.r-project.org/package=nadaverse) and [`WBqueryR`](https://github.com/mathiasweidinger/WBqueryR) packages talk to the Microdata Library's catalog API — good for searching studies and pulling codebooks and file lists programmatically (a nice agent task). The data files themselves you download yourself, through your account (access is requested per survey).
 
 ## Good research code
 

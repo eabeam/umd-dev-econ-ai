@@ -10,7 +10,7 @@ This site holds the materials for the AI and programming side of the semester-lo
 
 | If you're... | Go to |
 |---|---|
-| Setting up before the semester | **[Setup guide](setup/README.md)** — do this before the first class (August 31). Start today: one step needs a World Bank approval that takes days, not minutes. |
+| Setting up before the semester | **[Setup guide](setup/README.md)** — do this before the first class (August 31). Start early: the GitHub student-benefits verification can take a few days. |
 | Looking for the lecture slides | Posted here before August 31 |
 | Looking for starting-point files | [Templates](templates/README.md) — config pattern, cleaning/analysis skeletons, `AGENTS.md` house rules |
 | Looking for cheat sheets and links | [Materials](materials/README.md) — Git cheat sheet, research decisions log, links worth your time |

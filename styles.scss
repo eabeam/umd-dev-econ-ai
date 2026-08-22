@@ -9,4 +9,8 @@ h1, h2, h3 { color: #1B4D5C; }
 h1 { border-bottom: 2px solid #D4A84B; padding-bottom: 0.2rem; } // UVMGold rule, echoes the deck
 .navbar { border-bottom: 3px solid #D4A84B; }
 code { color: #C0534D; } // SoftCoral
-td code { white-space: nowrap; } // stop filename columns wrapping mid-word
+// Stop filename columns wrapping mid-word. Needs the :not() to outrank Quarto's
+// own `td code:not(.sourceCode){white-space:pre-wrap}`, and the link rule to undo
+// Bootstrap's `.table a{word-break:break-word}`.
+td code:not(.sourceCode) { white-space: nowrap; }
+.table td a { word-break: normal; }
