@@ -23,7 +23,7 @@ Structure: `code/cleaning/` builds `data/clean/` from `data/raw/`; `code/analysi
 - Run do-files with `stata-mp -b do <file>.do`, read the `.log`, and report errors honestly — do not paper over a failed run.
 - Don't add dependencies (user-written packages) without flagging them; anything required must be documented for replication.
 
-## Bonus rules — optional, but they've earned their place in my own projects
+## Bonus rules — suggestions I've found helpful
 
 *Each of these exists because an agent (or I) got it wrong once. Take the ones that fit your project.*
 
