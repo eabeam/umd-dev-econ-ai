@@ -10,6 +10,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{graphicx}
+\graphicspath{{figures/}}
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{tabularx}
@@ -126,6 +127,16 @@
     ($(asidebox.south west)+(-3pt,-1pt)$) rectangle ($(asidebox.north east)+(1pt,3pt)$);
 \end{tikzpicture}}
 
+% Date badge for tool-specific frames: the principles are stable, the
+% tooling is a snapshot — badge the snapshot so stale reuse flags itself.
+% Usage: \asof (defaults below) or \asof[Jan 2027]
+\newcommand{\asof}[1][Aug 2026]{%
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=north east, xshift=-0.45cm, yshift=-0.3cm,
+        text=CoolGray, font=\tiny\itshape] at (current page.north east)
+    {tooling as of #1};
+\end{tikzpicture}}
+
 % Section divider helper
 \newcommand{\divider}[2]{%
 {\setbeamertemplate{footline}{}%
@@ -156,9 +167,9 @@
   \fill[SlateTeal] (current page.north west) rectangle (current page.south east);
   \fill[UVMGold] ([yshift=0.3cm]current page.center -| current page.west) rectangle ([yshift=0.25cm]current page.center -| current page.east);
   \node[anchor=center, text=white, font=\fontsize{25}{31}\bfseries\selectfont, align=center]
-    at ([yshift=2.2cm]current page.center) {Good research programming\\with AI agents};
+    at ([yshift=2.2cm]current page.center) {Research programming\\with AI agents};
   \node[anchor=center, text=UVMGold, font=\fontsize{13}{17}\selectfont]
-    at ([yshift=0.9cm]current page.center) {Building your LSMS project so it lasts};
+    at ([yshift=0.9cm]current page.center) {And a bit of Github!};
   \node[anchor=center, text=white!80, font=\fontsize{10}{12}\selectfont]
     at ([yshift=-1.3cm]current page.center) {Emily Beam $\cdot$ University of Vermont};
   \node[anchor=center, text=CoolGray, font=\fontsize{9}{11}\selectfont]
@@ -171,8 +182,8 @@
 \begin{frame}{Today's plan}
 
 \begin{enumerate}
-  \item Why programming is a research skill
-  \item Setting up your project
+  \item Programming as a research skill
+  \item Recommendations for project set-up 
   \item Git in fifteen minutes
   \item Working with an AI agent
   \item Live demo
@@ -183,13 +194,13 @@
 
 \begin{tcolorbox}[accentbox]
 \centering
-Everything from today lives at \textbf{\url{github.com/eabeam/umd-dev-econ-ai}} --- slides, templates, cheat sheets, and the setup guide.
+All resources at \textbf{\url{github.com/eabeam/umd-dev-econ-ai}} --- slides, templates, cheat sheets, and the setup guide.
 \end{tcolorbox}
 
 \end{frame}
 
 %% ====== 1. WHY ======
-\divider{Why programming is a research skill}{(and not just a chore before the economics starts)}
+\divider{Programming as a research skill}{(and not just a chore before the economics starts)}
 
 \begin{frame}{Your semester project is a small research paper}
 
@@ -221,45 +232,37 @@ Everything from today lives at \textbf{\url{github.com/eabeam/umd-dev-econ-ai}} 
 \begin{itemize}
   \item Twelve assignments, one survey, one growing pipeline --- the same shape as a real paper
   \item Your cleaning code is an \textbf{investment}: it compounds from Assignment 1 to Assignment 12
-  \item By December, this could be the empirical base of your second-year paper
+  \item By December, this could be the empirical base of a full paper
 \end{itemize}
 
 \end{frame}
 
-\begin{frame}{The product isn't the table --- it's the pipeline that makes it}
+\begin{frame}{The pipeline is part of the product}
 
-From your assignment:
-
-\begin{tcolorbox}[quotebox]
-\textit{``...files that could reproduce every table/figure from your submissions without editing the code other than setting the project directory.''}
-\end{tcolorbox}
-
-\vspace{0.3cm}
-
-That single sentence is a complete replicability standard. It means:
 
 \begin{itemize}
-  \item Someone else (including you, later) can \textbf{rerun everything} from raw data to final table
-  \item No ``oh, you also have to run this other file first'' --- the code \textbf{documents itself}
-  \item If a number in your write-up can't be reproduced, it isn't a result yet
+  \item Cleaning/pipeline building in one dataset inserts you in broader LSMS structure language 
+  \item Building pipeline means understanding your code and your data. 
+  \item Weird things in data $\rightarrow$ research idea?
 \end{itemize}
 
 \end{frame}
 
-\begin{frame}{What changes with AI: verifying becomes the bottleneck}
+\begin{frame}{More agents, new problems}
 
 \begin{itemize}
-  \item With an agent, you will produce working code \textbf{faster than you can understand it}
-  \item The constraint moves: not \emph{can I write this loop?} but \emph{is this pipeline doing what I think?}
+  \item Power up your analysis with agents! 
+  \item But, you will produce working code \textbf{faster than you can review it}
+  \item No longer \emph{can I write this loop?}, but \emph{is this pipeline doing what I think?}
   \item Good structure, version control, and documentation are how you keep up
 \end{itemize}
 
-\vspace{0.4cm}
+% \vspace{0.4cm}
 
-\begin{tcolorbox}[accentbox]
-\centering
-Everything in this lecture is a \textbf{verification} tool. The AI writes more; you check better.
-\end{tcolorbox}
+% \begin{tcolorbox}[accentbox]
+% \centering
+% Everything in this lecture is a \textbf{verification} tool. The AI writes more; you check better.
+% \end{tcolorbox}
 
 \end{frame}
 
@@ -281,22 +284,27 @@ lsms-project/\\
 \hspace*{2em}raw/\\
 \hspace*{2em}clean/\\
 \hspace*{1em}output/\\
-\hspace*{1em}README.md
+\hspace*{1em}README.md\\
+\hspace*{1em}01\_todo.md\\
+\hspace*{1em}02\_decisions.md
 \end{tcolorbox}
 \end{column}
 \begin{column}{0.54\textwidth}
 \begin{itemize}
-  \item \textbf{raw/} is read-only --- you never edit a file the World Bank gave you
   \item \textbf{cleaning/} writes to data/clean/; \textbf{analysis/} reads from it
   \item \textbf{data/} stays out of Git --- the \texttt{.gitignore} template in the class repo handles this
+    \item \textbf{raw/} is read-only 
+    \item \textbf{clean/} is the output of cleaning code, input to analysis
+    \item \textbf{output/} recommend subfolders for tables, figures, and logs
   \item The agent sees this structure too --- a tidy folder is a better prompt than any instruction
+  \item But, if things get out of hand, your agent can organize them back together.
 \end{itemize}
 \end{column}
 \end{columns}
 
 \end{frame}
 
-\begin{frame}[fragile]{Hardcode nothing: the config pattern}
+\begin{frame}[fragile]{Minimize hardcoded paths}
 
 The only line a replicator should ever edit:
 
@@ -376,6 +384,35 @@ gen foodexp\_pc = foodexp\_hh /\\
 \end{itemize}
 
 \aside[6.2cm]{November-you has no memory of August-you. None.}
+
+\end{frame}
+
+\begin{frame}[fragile]{Document the project as you go}
+
+\begin{columns}[T]
+\begin{column}{0.42\textwidth}
+\begin{tcolorbox}[codebox]
+\color{white}\footnotesize\ttfamily
+README.md\\
+01\_todo.md\\
+02\_decisions.md\\
+03\_notes.md\\[6pt]
+* what the project is\\
+* how to run it\\
+* what is done, what remains\\
+* why design choices were made
+\end{tcolorbox}
+\end{column}
+\begin{column}{0.54\textwidth}
+\begin{itemize}
+  \item \textbf{README.md}: quick start for you, your teammates, and any agent
+  \item \textbf{01\_todo.md}: current tasks, priorities, and blockers
+  \item \textbf{02\_decisions.md}: the non-obvious choices that future-you will forget
+  \item A clean repo with a short explanation is easier to trust than a perfect-looking script with no context
+  \item Good documentation is not extra work; it is part of the research output
+\end{itemize}
+\end{column}
+\end{columns}
 
 \end{frame}
 
@@ -502,6 +539,7 @@ In the repo: \textbf{git cheat sheet} $\cdot$ \textbf{commit message guide} $\cd
 \divider{Working with an AI agent}{three rungs of delegation --- and what each one asks of you}
 
 \begin{frame}{Three rungs of delegation (all inside VS Code)}
+\asof
 
 \begin{columns}[T]
 \begin{column}{0.31\textwidth}
@@ -537,6 +575,7 @@ Highlight code, ask the panel: explain this, fix this\\[4pt]
 \end{frame}
 
 \begin{frame}{While you're in VS Code anyway}
+\asof
 
 Not AI --- just things the same window does well:
 
@@ -644,7 +683,146 @@ Watch for step 5. It will try something reasonable-looking. That's the point.
 
 \end{frame}
 
+%% ====== 5b. CAPTURED WALKTHROUGH ======
+%% Screenshots from the Aug 28, 2026 run of this exact demo (lsms-demo1, Malawi IHS6).
+%% Doubles as the fallback if the live demo will not cooperate on the day.
+
+\begin{frame}{It pushes back before it builds}
+\asof
+\begin{columns}[T]
+\begin{column}{0.54\textwidth}
+\includegraphics[width=\columnwidth, keepaspectratio]{01_plan_negotiation}
+\end{column}
+\begin{column}{0.43\textwidth}
+\vspace{0.3cm}
+\begin{itemize}
+  \item I asked for the Philippines
+  \item It went to check the World Bank catalog \emph{first}
+  \item The risk: a survey that is useful, but not technically a full household LSMS
+\end{itemize}
+\vspace{0.4cm}
+\begin{tcolorbox}[accentbox]
+\centering
+It argued before it built.
+\end{tcolorbox}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Scope and ``done,'' declared up front}
+\asof
+\begin{columns}[T]
+\begin{column}{0.42\textwidth}
+\includegraphics[height=0.70\textheight, keepaspectratio]{02_scope_definition_of_done}
+\end{column}
+\begin{column}{0.55\textwidth}
+\vspace{0.2cm}
+\begin{itemize}
+  \item It states the plan \emph{before} executing it
+  \item ``Definition of done'' is a checklist you can hold it to
+  \item Writes confined to the project folder
+  \item Raw data stays out of Git; Downloads untouched
+\end{itemize}
+\vspace{0.35cm}
+\begin{tcolorbox}[accentbox]
+\centering
+Bounded blast radius. Ask for this every time.
+\end{tcolorbox}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{It builds the structure you were just taught}
+\asof
+\begin{center}
+\includegraphics[width=0.90\textwidth, keepaspectratio]{03_project_scaffold}
+\end{center}
+\vspace{0.35cm}
+\begin{itemize}
+  \item \texttt{code/}, \texttt{documentation/}, \texttt{logs/}, \texttt{output/} --- the layout from earlier, unprompted
+  \item The plan file sits at the top, so next week's session can pick up where this one stopped
+\end{itemize}
+\end{frame}
+
+\begin{frame}{It reads the documentation first}
+\asof
+\begin{center}
+\includegraphics[width=0.90\textwidth, keepaspectratio]{04_documentation_inventory}
+\end{center}
+\vspace{0.35cm}
+\begin{tcolorbox}[accentbox]
+\centering
+Every questionnaire, the enumerator manual, the main report --- inventoried before a single line of analysis runs.
+\end{tcolorbox}
+\end{frame}
+
+\begin{frame}[fragile]{A pipeline, not one long do-file}
+\asof
+\begin{center}
+\includegraphics[width=0.86\textwidth, keepaspectratio]{05_numbered_do_file_pipeline}
+\end{center}
+\vspace{0.35cm}
+\begin{itemize}
+  \item \texttt{00\_master} calls the rest in order --- one command reruns everything
+  \item Build, validate, tabulate: each step is a file you can read on its own
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Raw output, then a table a human can read}
+\asof
+\begin{center}
+\includegraphics[width=0.70\textwidth, keepaspectratio]{06_weighted_table_raw_output}\\[0.22cm]
+\includegraphics[width=0.60\textwidth, keepaspectratio]{07_formatted_table}
+\end{center}
+\begin{tcolorbox}[accentbox]
+\centering
+Weights, standard errors, CIs --- then the same numbers, labeled and rounded.
+\end{tcolorbox}
+\end{frame}
+
+\begin{frame}[fragile]{The ask changed the pipeline, not just the output}
+\asof
+\begin{columns}[T]
+\begin{column}{0.57\textwidth}
+\includegraphics[width=\columnwidth, keepaspectratio]{08_figure_request_pipeline_diff}
+\end{column}
+\begin{column}{0.40\textwidth}
+\vspace{0.3cm}
+\begin{itemize}
+  \item One sentence asked for a figure
+  \item The diff adds \texttt{\$FIGURES} to the directory loop
+  \item \ldots and wires \texttt{05\_gender\_by\_age\_figure.do} into the master
+  \item Verified by actually running Stata
+\end{itemize}
+\vspace{0.4cm}
+\begin{tcolorbox}[accentbox]
+\centering
+Read the diff. Always.
+\end{tcolorbox}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{The meter is running}
+\asof
+\begin{center}
+\includegraphics[width=0.92\textwidth, keepaspectratio]{09_usage_check}
+\end{center}
+\vspace{0.45cm}
+\begin{itemize}
+  \item Agent mode burns a usage budget --- an unattended agent can spend a lot of it fast
+  \item Check the meter before a long run, not after it stops mid-task
+  \item Plan first, then execute: a good plan is cheap, a wrong build is expensive
+\end{itemize}
+\vspace{0.3cm}
+\begin{tcolorbox}[accentbox]
+\centering
+Everything you just watched ran inside one window.
+\end{tcolorbox}
+\end{frame}
+
 \begin{frame}{The other way (sixty seconds)}
+\asof
 
 For contrast: the same task, by pasting code into a chat window in the browser.
 
