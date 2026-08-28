@@ -95,6 +95,6 @@ VS Code earns its keep beyond the agent. Worth installing while you're in the Ex
 Stata stays our default language, and it plays nicely with this workflow. Two ways to run your code, and you'll use both:
 
 - **You run it**: open the `.do` file in Stata as usual. Good when you're exploring interactively.
-- **The agent runs it**: Stata has a batch mode that writes a `.log` file, so the agent can run your do-file, read the log, and fix its own errors. The exact command depends on your edition and machine — on Mac something like `stata-se -b do myfile.do` (swap `-mp`/`-be` for your edition; the binary lives inside `/Applications/Stata/StataSE.app/Contents/MacOS/`), on Windows `StataSE-64.exe /e do myfile.do`. Good first agent task: *"figure out the batch-mode command for my Stata install and add it to AGENTS.md."*
+- **The agent runs it**: Stata has a batch mode that writes a `.log` file, so the agent can run your do-file, read the log, and fix its own errors. The exact command depends on your edition and machine — on Mac something like `stata-se -b do myfile.do` (swap `-mp`/`-be` for your edition; the binary lives inside the Stata app bundle, under `Contents/MacOS/`), on Windows `StataSE-64.exe /e do myfile.do`. Good first agent task: *"figure out the batch-mode command for my Stata install and add it to AGENTS.md."*
 
 Either way, the part that can't be delegated is the same: *you* read the output and decide whether it's right. (You may also use R, Python, or anything else — the workflow is identical, minus the batch-mode wrinkle.)

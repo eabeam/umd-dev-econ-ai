@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-31a6999a1cd95299d168b9b1050b34af.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-62cad050edf1ffa426666a7ce3790da1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -274,7 +274,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Stata stays our default language, and it plays nicely with this workflow. Two ways to run your code, and you’ll use both:</p>
 <ul>
 <li><strong>You run it</strong>: open the <code>.do</code> file in Stata as usual. Good when you’re exploring interactively.</li>
-<li><strong>The agent runs it</strong>: Stata has a batch mode that writes a <code>.log</code> file, so the agent can run your do-file, read the log, and fix its own errors. The exact command depends on your edition and machine — on Mac something like <code>stata-se -b do myfile.do</code> (swap <code>-mp</code>/<code>-be</code> for your edition; the binary lives inside <code>/Applications/Stata/StataSE.app/Contents/MacOS/</code>), on Windows <code>StataSE-64.exe /e do myfile.do</code>. Good first agent task: <em>“figure out the batch-mode command for my Stata install and add it to AGENTS.md.”</em></li>
+<li><strong>The agent runs it</strong>: Stata has a batch mode that writes a <code>.log</code> file, so the agent can run your do-file, read the log, and fix its own errors. The exact command depends on your edition and machine — on Mac something like <code>stata-se -b do myfile.do</code> (swap <code>-mp</code>/<code>-be</code> for your edition; the binary lives inside the Stata app bundle, under <code>Contents/MacOS/</code>), on Windows <code>StataSE-64.exe /e do myfile.do</code>. Good first agent task: <em>“figure out the batch-mode command for my Stata install and add it to AGENTS.md.”</em></li>
 </ul>
 <p>Either way, the part that can’t be delegated is the same: <em>you</em> read the output and decide whether it’s right. (You may also use R, Python, or anything else — the workflow is identical, minus the batch-mode wrinkle.)</p>
 

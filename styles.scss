@@ -14,3 +14,23 @@ code { color: #C0534D; } // SoftCoral
 // Bootstrap's `.table a{word-break:break-word}`.
 td code:not(.sourceCode) { white-space: nowrap; }
 .table td a { word-break: normal; }
+// Phones: don't let inline code or long links push the page wider than the
+// screen. overflow-wrap:anywhere only breaks when a token can't fit, so desktop
+// rendering is unchanged.
+code:not(.sourceCode), a { overflow-wrap: anywhere; }
+:not(pre) > code { white-space: pre-wrap; } // Quarto sets inline code to `pre`, which defeats overflow-wrap
+@media (max-width: 575.98px) {
+  // Two-column file tables stack: filename on top, description underneath.
+  table.table:not(:has(th:nth-child(3))) {
+    display: block; width: 100%;
+    tbody { display: block; width: 100%; }
+    colgroup { display: none; }
+    thead { display: none; }
+    tr { display: block; padding: .5rem 0; border-bottom: 1px solid #dee2e6; }
+    td { display: block; border: 0; padding: .1rem 0; }
+    td:first-child { font-weight: 600; }
+    td code:not(.sourceCode) { white-space: pre-wrap; } // long example commit messages wrap
+  }
+  // Wider tables (the decisions-log template) scroll sideways instead.
+  table.table:has(th:nth-child(3)) { display: block; overflow-x: auto; }
+}
