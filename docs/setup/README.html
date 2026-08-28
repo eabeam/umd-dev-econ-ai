@@ -198,12 +198,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="chatgpt-subscription" class="level2">
 <h2 class="anchored" data-anchor-id="chatgpt-subscription">1. ChatGPT subscription</h2>
-<p>The course workflow uses an AI agent that comes with a paid ChatGPT plan. Two routes — <strong>either is fine</strong>:</p>
+<p>The course workflow uses an AI agent that comes with a paid ChatGPT plan. Two routes:</p>
 <ul>
-<li><strong>Route A (always works): personal ChatGPT Plus, $20/month.</strong> Go to <a href="https://chatgpt.com">chatgpt.com</a>, sign in (create an account with any email), and upgrade to Plus from the account menu. A Plus plan should comfortably cover this course’s workload; you can cancel after the semester.</li>
-<li><strong>Route B: UMD ChatGPT Enterprise.</strong> UMD has an institutional ChatGPT agreement. Email UMD IT and ask whether graduate students can get a ChatGPT Enterprise/Edu seat that includes <strong>Codex</strong> access. If the answer is slow or unclear, don’t wait — use Route A.</li>
+<li><strong>Route A (default): personal ChatGPT Plus, $20/month.</strong> Go to <a href="https://chatgpt.com">chatgpt.com</a>, sign in (create an account with any email), and upgrade to Plus from the account menu. Plus covers a course’s workload if you work in sessions — Codex on Plus has a rolling usage cap (currently five-hour windows), so if you hit it, take a break rather than upgrade. You can cancel after the semester.</li>
+<li><strong>Route B: a UMD-licensed seat.</strong> UMD sells ChatGPT Enterprise seats through DIT, but they’re $30+/month per user and each request needs a departmental budget approver — so this only makes sense if your program is covering it. If it is, request a seat at <a href="https://chatgpt-licensing.umd.edu/">chatgpt-licensing.umd.edu</a> and confirm Codex is included in your tier. If you’re not sure, use Route A and don’t wait.</li>
 </ul>
-<p><em>Prefer Claude?</em> That’s allowed — but at the $20 tier expect to hit usage limits with agent-style work; you’d likely need a heavier plan. The class demos use the ChatGPT/Codex stack.</p>
+<p><em>Prefer Claude?</em> That’s fine — but at the $20 tier expect to hit usage limits with agent-style work; you’d likely need a heavier plan. The class demos use the ChatGPT/Codex stack.</p>
 </section>
 <section id="vs-code-the-codex-extension" class="level2">
 <h2 class="anchored" data-anchor-id="vs-code-the-codex-extension">2. VS Code + the Codex extension</h2>
@@ -271,10 +271,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="a-note-on-stata" class="level2">
 <h2 class="anchored" data-anchor-id="a-note-on-stata">A note on Stata</h2>
-<p>Stata stays our default language (matching your econometrics sequence), and it plays nicely with this workflow. Two ways to run your code, and you’ll use both:</p>
+<p>Stata stays our default language, and it plays nicely with this workflow. Two ways to run your code, and you’ll use both:</p>
 <ul>
 <li><strong>You run it</strong>: open the <code>.do</code> file in Stata as usual. Good when you’re exploring interactively.</li>
-<li><strong>The agent runs it</strong>: Stata has a batch mode (<code>stata-mp -b do myfile.do</code> from the terminal), which writes a <code>.log</code> file — so the agent can run your do-file, read the log, and fix its own errors.</li>
+<li><strong>The agent runs it</strong>: Stata has a batch mode that writes a <code>.log</code> file, so the agent can run your do-file, read the log, and fix its own errors. The exact command depends on your edition and machine — on Mac something like <code>stata-se -b do myfile.do</code> (swap <code>-mp</code>/<code>-be</code> for your edition; the binary lives inside <code>/Applications/Stata/StataSE.app/Contents/MacOS/</code>), on Windows <code>StataSE-64.exe /e do myfile.do</code>. Good first agent task: <em>“figure out the batch-mode command for my Stata install and add it to AGENTS.md.”</em></li>
 </ul>
 <p>Either way, the part that can’t be delegated is the same: <em>you</em> read the output and decide whether it’s right. (You may also use R, Python, or anything else — the workflow is identical, minus the batch-mode wrinkle.)</p>
 

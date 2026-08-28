@@ -1,6 +1,6 @@
 # Git in VS Code
 
-Everything Git does day-to-day lives in one place: the **Source Control panel** — the branching icon in the left sidebar (`Ctrl/Cmd+Shift+G`). Here's your way around it.
+Everything Git does day-to-day lives in one place: the **Source Control panel** — the branching icon in the left sidebar (`Ctrl+Shift+G` — Control on Mac too). Here's your way around it.
 
 ## Reading the panel
 
@@ -19,7 +19,7 @@ Everything Git does day-to-day lives in one place: the **Source Control panel** 
 
 - **Discard changes** (right-click a file → Discard Changes, or the ↩ icon): file goes back to the last commit. This is your escape hatch when an agent edit went sideways.
 - **Timeline** (bottom of the Explorer sidebar, with a file open): every commit that touched this file — click one to see that version
-- Committed something embarrassing? It's fine — the history is append-only, and the next commit just moves forward. Nothing is ever lost.
+- Committed something embarrassing? It's fine — the history is append-only, and the next commit just moves forward. Committed work is never lost.
 
 ## Or don't drive at all
 

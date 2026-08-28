@@ -20,7 +20,7 @@ Structure: `code/cleaning/` builds `data/clean/` from `data/raw/`; `code/analysi
 - **Never** impute, drop, winsorize, recode, or restrict the sample without saying so explicitly in your response — these are research decisions, and each one gets an entry in the decisions log.
 - Report the change in N after any operation that affects the sample.
 - **You keep the log**: after any research decision, append a drafted entry to the decisions log (what you found, what you did, alternative considered, N impact) for my review. I approve or correct — but you write it, at the moment it happens.
-- Run do-files with `stata-mp -b do <file>.do`, read the `.log`, and report errors honestly — do not paper over a failed run.
+- Run do-files in batch mode — `[BATCH COMMAND] do <file>.do`, e.g. `stata-se -b` on Mac or `StataSE-64.exe /e` on Windows (fill in the one that works on this machine) — then read the `.log` and report errors honestly. Do not paper over a failed run.
 - Don't add dependencies (user-written packages) without flagging them; anything required must be documented for replication.
 
 ## Bonus rules — suggestions I've found helpful
@@ -29,7 +29,7 @@ Structure: `code/cleaning/` builds `data/clean/` from `data/raw/`; `code/analysi
 
 **Running code**
 
-- Stata batch mode **always exits 0**, even when the do-file failed. After `stata-mp -b`, search the `.log` for a line matching `r(#);` (e.g. `r(111);`) before reporting success. No `r(` line = clean run; anything else = stop and show me.
+- Stata batch mode **always exits 0**, even when the do-file failed. After a batch run, search the `.log` for a line matching `r(#);` (e.g. `r(111);`) before reporting success. No `r(` line = clean run; anything else = stop and show me.
 - Every do-file runs on its own: `capture log close _all` at the top, then `if "$config_loaded" != "1" include "00_config.do"`, then load its own data. Never write a file that only works if something else ran first.
 - No `capture` around logic — not `capture drop`, not `capture gen`, not a block. The variable either should exist or shouldn't; `capture` hides the error I needed to see. (Master files wrapping whole phases are the one exception.)
 

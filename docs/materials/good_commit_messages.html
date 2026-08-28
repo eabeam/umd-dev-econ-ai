@@ -159,17 +159,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#writing-good-commit-messages" id="toc-writing-good-commit-messages" class="nav-link active" data-scroll-target="#writing-good-commit-messages">Writing Good Commit Messages</a>
+  <li><a href="#writing-good-commit-messages" id="toc-writing-good-commit-messages" class="nav-link active" data-scroll-target="#writing-good-commit-messages">Writing good commit messages</a>
   <ul class="collapse">
-  <li><a href="#the-template" id="toc-the-template" class="nav-link" data-scroll-target="#the-template">The Template</a></li>
-  <li><a href="#bad-vs.-good-commit-messages" id="toc-bad-vs.-good-commit-messages" class="nav-link" data-scroll-target="#bad-vs.-good-commit-messages">Bad vs.&nbsp;Good Commit Messages</a>
+  <li><a href="#the-template" id="toc-the-template" class="nav-link" data-scroll-target="#the-template">The template</a></li>
+  <li><a href="#bad-vs.-good-commit-messages" id="toc-bad-vs.-good-commit-messages" class="nav-link" data-scroll-target="#bad-vs.-good-commit-messages">Bad vs.&nbsp;good commit messages</a>
   <ul class="collapse">
   <li><a href="#bad-messages" id="toc-bad-messages" class="nav-link" data-scroll-target="#bad-messages">Bad messages</a></li>
   <li><a href="#good-messages" id="toc-good-messages" class="nav-link" data-scroll-target="#good-messages">Good messages</a></li>
   </ul></li>
-  <li><a href="#a-real-world-example" id="toc-a-real-world-example" class="nav-link" data-scroll-target="#a-real-world-example">A Real-World Example</a></li>
+  <li><a href="#a-real-world-example" id="toc-a-real-world-example" class="nav-link" data-scroll-target="#a-real-world-example">A real-world example</a></li>
   <li><a href="#guidelines" id="toc-guidelines" class="nav-link" data-scroll-target="#guidelines">Guidelines</a></li>
-  <li><a href="#quick-self-test" id="toc-quick-self-test" class="nav-link" data-scroll-target="#quick-self-test">Quick Self-Test</a></li>
+  <li><a href="#quick-self-test" id="toc-quick-self-test" class="nav-link" data-scroll-target="#quick-self-test">Quick self-test</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -181,18 +181,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <section id="writing-good-commit-messages" class="level1">
-<h1>Writing Good Commit Messages</h1>
-<p>Your commit messages are a research log. Future you will read them when you are trying to remember why you changed something six months ago. Your co-authors will read them when they are trying to understand what you did. Journal referees may read them in your replication package.</p>
+<h1>Writing good commit messages</h1>
+<p>Your commit messages are a research log. Future you will read them when you’re trying to remember why you changed something six months ago. Your co-authors will read them when they’re trying to understand what you did. Journal referees may read them in your replication package.</p>
 <p>Make them count.</p>
 <hr>
 <section id="the-template" class="level2">
-<h2 class="anchored" data-anchor-id="the-template">The Template</h2>
+<h2 class="anchored" data-anchor-id="the-template">The template</h2>
 <pre><code>[Action verb] [what changed] [why, if not obvious]</code></pre>
-<p>Start with a verb. Be specific about what changed. Add context if someone reading just the message would not understand the purpose.</p>
+<p>Start with a verb. Be specific about what changed. Add context if someone reading just the message wouldn’t understand the purpose.</p>
 <hr>
 </section>
 <section id="bad-vs.-good-commit-messages" class="level2">
-<h2 class="anchored" data-anchor-id="bad-vs.-good-commit-messages">Bad vs.&nbsp;Good Commit Messages</h2>
+<h2 class="anchored" data-anchor-id="bad-vs.-good-commit-messages">Bad vs.&nbsp;good commit messages</h2>
 <section id="bad-messages" class="level3">
 <h3 class="anchored" data-anchor-id="bad-messages">Bad messages</h3>
 <table class="caption-top table">
@@ -203,7 +203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="header">
 <th>Message</th>
-<th>Why It Is Bad</th>
+<th>Why it’s bad</th>
 </tr>
 </thead>
 <tbody>
@@ -221,15 +221,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><code>final</code></td>
-<td>It is never final.</td>
+<td>It’s never final.</td>
 </tr>
 <tr class="odd">
 <td><code>final v2</code></td>
-<td>Proof that it was not final.</td>
+<td>Proof that it wasn’t.</td>
 </tr>
 <tr class="even">
 <td><code>asdfg</code></td>
-<td>You will regret this.</td>
+<td>You’ll regret this.</td>
 </tr>
 <tr class="odd">
 <td><code>WIP</code></td>
@@ -248,7 +248,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="header">
 <th>Message</th>
-<th>Why It Works</th>
+<th>Why it works</th>
 </tr>
 </thead>
 <tbody>
@@ -290,8 +290,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="a-real-world-example" class="level2">
-<h2 class="anchored" data-anchor-id="a-real-world-example">A Real-World Example</h2>
-<p>Imagine you are working on a project studying the effect of a job training program on earnings. Here is what a clean commit history might look like:</p>
+<h2 class="anchored" data-anchor-id="a-real-world-example">A real-world example</h2>
+<p>Imagine you’re working on a project studying the effect of a job training program on earnings. Here is what a clean commit history might look like:</p>
 <pre><code>f3a21b8  Add heterogeneity analysis by gender and education level
 c9e12d4  Fix top-coding of earnings at 99th percentile (was 95th)
 a8b34c1  Add district fixed effects to main specification
@@ -321,7 +321,7 @@ a8b34c1  Add district fixed effects to main specification
 <hr>
 </section>
 <section id="quick-self-test" class="level2">
-<h2 class="anchored" data-anchor-id="quick-self-test">Quick Self-Test</h2>
+<h2 class="anchored" data-anchor-id="quick-self-test">Quick self-test</h2>
 <p>Before you commit, ask yourself: “If I read this message in six months with no other context, would I understand what changed and why?”</p>
 <p>If the answer is no, rewrite it.</p>
 

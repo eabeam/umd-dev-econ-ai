@@ -1,36 +1,36 @@
-# Git Cheat Sheet for Economists
+# Git cheat sheet for economists
 
-A one-page reference for the commands you will use most often.
+A one-page reference for the commands you'll use most often.
 
 ---
 
-## Setup (One-Time)
+## Setup (one-time)
 
 ```bash
 git config --global user.name "Your Name"
-git config --global user.email "your.email@uvm.edu"
+git config --global user.email "you@umd.edu"
 ```
 
 ---
 
-## Starting a Project
+## Starting a project
 
-| What You Want | Command |
+| What you want | Command |
 |---|---|
 | Create a new repo from scratch | `git init` |
 | Download an existing repo | `git clone <url>` |
 
 ---
 
-## Daily Workflow
+## Daily workflow
 
-This is the sequence you will repeat constantly:
+This is the sequence you'll repeat constantly:
 
 ```
 [edit files] → git status → git add <files> → git commit -m "message" → git push
 ```
 
-| Command | What It Does |
+| Command | What it does |
 |---|---|
 | `git status` | Show what has changed since the last commit |
 | `git add <file>` | Stage a file (mark it for the next commit) |
@@ -41,20 +41,20 @@ This is the sequence you will repeat constantly:
 
 ---
 
-## Inspecting History
+## Inspecting history
 
-| Command | What It Does |
+| Command | What it does |
 |---|---|
 | `git log --oneline` | Show commit history (compact) |
 | `git log` | Show commit history (full detail) |
-| `git diff` | Show unstaged changes (what you have edited but not yet added) |
+| `git diff` | Show unstaged changes (what you've edited but not yet added) |
 | `git diff --staged` | Show staged changes (what will be in the next commit) |
 | `git show <hash>` | Show what a specific commit changed |
 | `git show <hash>:<file>` | Show a file as it existed at a specific commit |
 
 ---
 
-## Undoing Things
+## Undoing things
 
 | Situation | Command |
 |---|---|
@@ -65,7 +65,7 @@ This is the sequence you will repeat constantly:
 
 ---
 
-## Key Concepts
+## Key concepts
 
 **Repository (repo)**: A project folder tracked by Git.
 
@@ -79,15 +79,15 @@ This is the sequence you will repeat constantly:
 
 ---
 
-## When Things Go Wrong
+## When things go wrong
 
-**"I do not know what is going on"**
+**"I don't know what's going on"**
 ```bash
 git status
 ```
 Read the output carefully. Git usually tells you what to do next.
 
-**"I committed a file I should not have (and have not pushed yet)"**
+**"I committed a file I shouldn't have (and haven't pushed yet)"**
 ```bash
 git reset --soft HEAD~1
 git restore --staged <unwanted-file>
@@ -111,7 +111,7 @@ This removes the Git repository (not your files). The folder becomes a regular f
 
 ---
 
-## Files to Ignore
+## Files to ignore
 
 Use a `.gitignore` file to tell Git which files to skip. Common entries for economics projects:
 
@@ -122,4 +122,4 @@ Use a `.gitignore` file to tell Git which files to skip. Common entries for econ
 .DS_Store      # macOS system file
 ```
 
-See `econ_gitignore` in this folder for a complete template.
+See [`econ_gitignore_template`](econ_gitignore_template) in this folder for a complete version.

@@ -159,16 +159,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#git-cheat-sheet-for-economists" id="toc-git-cheat-sheet-for-economists" class="nav-link active" data-scroll-target="#git-cheat-sheet-for-economists">Git Cheat Sheet for Economists</a>
+  <li><a href="#git-cheat-sheet-for-economists" id="toc-git-cheat-sheet-for-economists" class="nav-link active" data-scroll-target="#git-cheat-sheet-for-economists">Git cheat sheet for economists</a>
   <ul class="collapse">
-  <li><a href="#setup-one-time" id="toc-setup-one-time" class="nav-link" data-scroll-target="#setup-one-time">Setup (One-Time)</a></li>
-  <li><a href="#starting-a-project" id="toc-starting-a-project" class="nav-link" data-scroll-target="#starting-a-project">Starting a Project</a></li>
-  <li><a href="#daily-workflow" id="toc-daily-workflow" class="nav-link" data-scroll-target="#daily-workflow">Daily Workflow</a></li>
-  <li><a href="#inspecting-history" id="toc-inspecting-history" class="nav-link" data-scroll-target="#inspecting-history">Inspecting History</a></li>
-  <li><a href="#undoing-things" id="toc-undoing-things" class="nav-link" data-scroll-target="#undoing-things">Undoing Things</a></li>
-  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts">Key Concepts</a></li>
-  <li><a href="#when-things-go-wrong" id="toc-when-things-go-wrong" class="nav-link" data-scroll-target="#when-things-go-wrong">When Things Go Wrong</a></li>
-  <li><a href="#files-to-ignore" id="toc-files-to-ignore" class="nav-link" data-scroll-target="#files-to-ignore">Files to Ignore</a></li>
+  <li><a href="#setup-one-time" id="toc-setup-one-time" class="nav-link" data-scroll-target="#setup-one-time">Setup (one-time)</a></li>
+  <li><a href="#starting-a-project" id="toc-starting-a-project" class="nav-link" data-scroll-target="#starting-a-project">Starting a project</a></li>
+  <li><a href="#daily-workflow" id="toc-daily-workflow" class="nav-link" data-scroll-target="#daily-workflow">Daily workflow</a></li>
+  <li><a href="#inspecting-history" id="toc-inspecting-history" class="nav-link" data-scroll-target="#inspecting-history">Inspecting history</a></li>
+  <li><a href="#undoing-things" id="toc-undoing-things" class="nav-link" data-scroll-target="#undoing-things">Undoing things</a></li>
+  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts">Key concepts</a></li>
+  <li><a href="#when-things-go-wrong" id="toc-when-things-go-wrong" class="nav-link" data-scroll-target="#when-things-go-wrong">When things go wrong</a></li>
+  <li><a href="#files-to-ignore" id="toc-files-to-ignore" class="nav-link" data-scroll-target="#files-to-ignore">Files to ignore</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -180,21 +180,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <section id="git-cheat-sheet-for-economists" class="level1">
-<h1>Git Cheat Sheet for Economists</h1>
-<p>A one-page reference for the commands you will use most often.</p>
+<h1>Git cheat sheet for economists</h1>
+<p>A one-page reference for the commands you’ll use most often.</p>
 <hr>
 <section id="setup-one-time" class="level2">
-<h2 class="anchored" data-anchor-id="setup-one-time">Setup (One-Time)</h2>
+<h2 class="anchored" data-anchor-id="setup-one-time">Setup (one-time)</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"your.email@uvm.edu"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"you@umd.edu"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="starting-a-project" class="level2">
-<h2 class="anchored" data-anchor-id="starting-a-project">Starting a Project</h2>
+<h2 class="anchored" data-anchor-id="starting-a-project">Starting a project</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>What You Want</th>
+<th>What you want</th>
 <th>Command</th>
 </tr>
 </thead>
@@ -212,8 +212,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="daily-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="daily-workflow">Daily Workflow</h2>
-<p>This is the sequence you will repeat constantly:</p>
+<h2 class="anchored" data-anchor-id="daily-workflow">Daily workflow</h2>
+<p>This is the sequence you’ll repeat constantly:</p>
 <pre><code>[edit files] → git status → git add &lt;files&gt; → git commit -m "message" → git push</code></pre>
 <table class="caption-top table">
 <colgroup>
@@ -223,7 +223,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="header">
 <th>Command</th>
-<th>What It Does</th>
+<th>What it does</th>
 </tr>
 </thead>
 <tbody>
@@ -256,7 +256,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="inspecting-history" class="level2">
-<h2 class="anchored" data-anchor-id="inspecting-history">Inspecting History</h2>
+<h2 class="anchored" data-anchor-id="inspecting-history">Inspecting history</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -265,7 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="header">
 <th>Command</th>
-<th>What It Does</th>
+<th>What it does</th>
 </tr>
 </thead>
 <tbody>
@@ -279,7 +279,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td><code>git diff</code></td>
-<td>Show unstaged changes (what you have edited but not yet added)</td>
+<td>Show unstaged changes (what you’ve edited but not yet added)</td>
 </tr>
 <tr class="even">
 <td><code>git diff --staged</code></td>
@@ -298,7 +298,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="undoing-things" class="level2">
-<h2 class="anchored" data-anchor-id="undoing-things">Undoing Things</h2>
+<h2 class="anchored" data-anchor-id="undoing-things">Undoing things</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -332,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="key-concepts" class="level2">
-<h2 class="anchored" data-anchor-id="key-concepts">Key Concepts</h2>
+<h2 class="anchored" data-anchor-id="key-concepts">Key concepts</h2>
 <p><strong>Repository (repo)</strong>: A project folder tracked by Git.</p>
 <p><strong>Commit</strong>: A snapshot of your project at a point in time. Each commit has a unique hash (like <code>a3b8f2d</code>), a message, an author, and a timestamp.</p>
 <p><strong>Staging area</strong>: A holding zone between your working files and a commit. You choose which changes go into each commit.</p>
@@ -341,11 +341,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="when-things-go-wrong" class="level2">
-<h2 class="anchored" data-anchor-id="when-things-go-wrong">When Things Go Wrong</h2>
-<p><strong>“I do not know what is going on”</strong></p>
+<h2 class="anchored" data-anchor-id="when-things-go-wrong">When things go wrong</h2>
+<p><strong>“I don’t know what’s going on”</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Read the output carefully. Git usually tells you what to do next.</p>
-<p><strong>“I committed a file I should not have (and have not pushed yet)”</strong></p>
+<p><strong>“I committed a file I shouldn’t have (and haven’t pushed yet)”</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--soft</span> HEAD~1</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> restore <span class="at">--staged</span> <span class="op">&lt;</span>unwanted-file<span class="op">&gt;</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Same message as before"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -359,13 +359,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 <section id="files-to-ignore" class="level2">
-<h2 class="anchored" data-anchor-id="files-to-ignore">Files to Ignore</h2>
+<h2 class="anchored" data-anchor-id="files-to-ignore">Files to ignore</h2>
 <p>Use a <code>.gitignore</code> file to tell Git which files to skip. Common entries for economics projects:</p>
 <pre><code>*.dta          # Stata data
 *.csv          # CSV data
 *.log          # Stata logs
 .DS_Store      # macOS system file</code></pre>
-<p>See <code>econ_gitignore</code> in this folder for a complete template.</p>
+<p>See <a href="econ_gitignore_template"><code>econ_gitignore_template</code></a> in this folder for a complete version.</p>
 
 
 </section>

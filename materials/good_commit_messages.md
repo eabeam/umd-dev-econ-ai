@@ -1,38 +1,38 @@
-# Writing Good Commit Messages
+# Writing good commit messages
 
-Your commit messages are a research log. Future you will read them when you are trying to remember why you changed something six months ago. Your co-authors will read them when they are trying to understand what you did. Journal referees may read them in your replication package.
+Your commit messages are a research log. Future you will read them when you're trying to remember why you changed something six months ago. Your co-authors will read them when they're trying to understand what you did. Journal referees may read them in your replication package.
 
 Make them count.
 
 ---
 
-## The Template
+## The template
 
 ```
 [Action verb] [what changed] [why, if not obvious]
 ```
 
-Start with a verb. Be specific about what changed. Add context if someone reading just the message would not understand the purpose.
+Start with a verb. Be specific about what changed. Add context if someone reading just the message wouldn't understand the purpose.
 
 ---
 
-## Bad vs. Good Commit Messages
+## Bad vs. good commit messages
 
 ### Bad messages
 
-| Message | Why It Is Bad |
+| Message | Why it's bad |
 |---|---|
 | `update` | Update what? Which file? Why? |
 | `changes` | This says nothing. |
 | `fixed stuff` | What stuff? What was broken? |
-| `final` | It is never final. |
-| `final v2` | Proof that it was not final. |
-| `asdfg` | You will regret this. |
+| `final` | It's never final. |
+| `final v2` | Proof that it wasn't. |
+| `asdfg` | You'll regret this. |
 | `WIP` | Acceptable as a temporary save, but clean it up before sharing. |
 
 ### Good messages
 
-| Message | Why It Works |
+| Message | Why it works |
 |---|---|
 | `Add income variable construction from raw survey data` | Clear action, specific variable, identifies the data source. |
 | `Fix merge error: duplicate household IDs in round 2` | Identifies the bug (duplicates), the location (round 2), and the action (fix). |
@@ -45,9 +45,9 @@ Start with a verb. Be specific about what changed. Add context if someone readin
 
 ---
 
-## A Real-World Example
+## A real-world example
 
-Imagine you are working on a project studying the effect of a job training program on earnings. Here is what a clean commit history might look like:
+Imagine you're working on a project studying the effect of a job training program on earnings. Here is what a clean commit history might look like:
 
 ```
 f3a21b8  Add heterogeneity analysis by gender and education level
@@ -82,7 +82,7 @@ Affects Tables 2-4 and Figure 3."
 
 ---
 
-## Quick Self-Test
+## Quick self-test
 
 Before you commit, ask yourself: "If I read this message in six months with no other context, would I understand what changed and why?"
 

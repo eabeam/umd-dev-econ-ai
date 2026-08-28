@@ -17,12 +17,12 @@ Getting stuck somewhere is normal — note where, move on, and bring it to the f
 
 ## 1. ChatGPT subscription
 
-The course workflow uses an AI agent that comes with a paid ChatGPT plan. Two routes — **either is fine**:
+The course workflow uses an AI agent that comes with a paid ChatGPT plan. Two routes:
 
-- **Route A (always works): personal ChatGPT Plus, $20/month.** Go to [chatgpt.com](https://chatgpt.com), sign in (create an account with any email), and upgrade to Plus from the account menu. A Plus plan should comfortably cover this course's workload; you can cancel after the semester.
-- **Route B: UMD ChatGPT Enterprise.** UMD has an institutional ChatGPT agreement. Email UMD IT and ask whether graduate students can get a ChatGPT Enterprise/Edu seat that includes **Codex** access. If the answer is slow or unclear, don't wait — use Route A.
+- **Route A (default): personal ChatGPT Plus, $20/month.** Go to [chatgpt.com](https://chatgpt.com), sign in (create an account with any email), and upgrade to Plus from the account menu. Plus covers a course's workload if you work in sessions — Codex on Plus has a rolling usage cap (currently five-hour windows), so if you hit it, take a break rather than upgrade. You can cancel after the semester.
+- **Route B: a UMD-licensed seat.** UMD sells ChatGPT Enterprise seats through DIT, but they're $30+/month per user and each request needs a departmental budget approver — so this only makes sense if your program is covering it. If it is, request a seat at [chatgpt-licensing.umd.edu](https://chatgpt-licensing.umd.edu/) and confirm Codex is included in your tier. If you're not sure, use Route A and don't wait.
 
-*Prefer Claude?* That's allowed — but at the $20 tier expect to hit usage limits with agent-style work; you'd likely need a heavier plan. The class demos use the ChatGPT/Codex stack.
+*Prefer Claude?* That's fine — but at the $20 tier expect to hit usage limits with agent-style work; you'd likely need a heavier plan. The class demos use the ChatGPT/Codex stack.
 
 ## 2. VS Code + the Codex extension
 
@@ -92,9 +92,9 @@ VS Code earns its keep beyond the agent. Worth installing while you're in the Ex
 
 ## A note on Stata
 
-Stata stays our default language (matching your econometrics sequence), and it plays nicely with this workflow. Two ways to run your code, and you'll use both:
+Stata stays our default language, and it plays nicely with this workflow. Two ways to run your code, and you'll use both:
 
 - **You run it**: open the `.do` file in Stata as usual. Good when you're exploring interactively.
-- **The agent runs it**: Stata has a batch mode (`stata-mp -b do myfile.do` from the terminal), which writes a `.log` file — so the agent can run your do-file, read the log, and fix its own errors.
+- **The agent runs it**: Stata has a batch mode that writes a `.log` file, so the agent can run your do-file, read the log, and fix its own errors. The exact command depends on your edition and machine — on Mac something like `stata-se -b do myfile.do` (swap `-mp`/`-be` for your edition; the binary lives inside `/Applications/Stata/StataSE.app/Contents/MacOS/`), on Windows `StataSE-64.exe /e do myfile.do`. Good first agent task: *"figure out the batch-mode command for my Stata install and add it to AGENTS.md."*
 
 Either way, the part that can't be delegated is the same: *you* read the output and decide whether it's right. (You may also use R, Python, or anything else — the workflow is identical, minus the batch-mode wrinkle.)
