@@ -184,7 +184,7 @@
 \begin{enumerate}
   \item Programming as a research skill
   \item Recommendations for project set-up 
-  \item Git in fifteen minutes
+  \item Crash course in Github
   \item Working with an AI agent
   \item Live demo
   \item Rules of the road --- and setup triage
@@ -230,9 +230,10 @@ All resources at \textbf{\url{github.com/eabeam/umd-dev-econ-ai}} --- slides, te
 \vspace{0.3cm}
 
 \begin{itemize}
-  \item Twelve assignments, one survey, one growing pipeline --- the same shape as a real paper
+%  \item Twelve assignments, one survey, one growing pipeline --- the same shape as a real paper
   \item Your cleaning code is an \textbf{investment}: it compounds from Assignment 1 to Assignment 12
-  \item By December, this could be the empirical base of a full paper
+  \item Your work could be empirical basis of eventual paper (or not!) 
+  \item Beautiful pipelines are gift to your collaborators and future self 
 \end{itemize}
 
 \end{frame}
@@ -267,7 +268,7 @@ All resources at \textbf{\url{github.com/eabeam/umd-dev-econ-ai}} --- slides, te
 \end{frame}
 
 %% ====== 2. PROJECT SETUP ======
-\divider{Setting up your project}{one folder, clear paths, files that explain themselves}
+\divider{Setting up your project}{one folder, clear paths, can't lose}
 
 \begin{frame}[fragile]{One folder, one project}
 
@@ -321,7 +322,7 @@ use "\$root/data/clean/household.dta", clear
 
 \begin{itemize}
   \item A path like \texttt{C:/Users/you/Desktop/final/actually\_final/} breaks on every machine but yours
-  \item This is exactly the ``setting the project directory'' your assignment allows --- one edit, everything runs
+%  \item This is exactly the ``setting the project directory'' your assignment allows --- one edit, everything runs
 \end{itemize}
 
 \end{frame}
@@ -340,17 +341,17 @@ Improving a variable definition in week 6? Fine --- that's the design. Rerun, an
 \begin{tcolorbox}[keybox, title={\faFile\quad Analysis files}]
 \footnotesize
 One file per table or figure, \textbf{self-contained}\\[4pt]
-It may call cleaning output --- but running it alone produces the table. (Your grader thanks you. So does your November self.)
+It may call cleaning output --- but running it alone produces the table. 
 \end{tcolorbox}
 \end{column}
 \end{columns}
 
-\vspace{0.35cm}
-
-\begin{tcolorbox}[accentbox]
-\centering
-This split is in your assignment already --- it's also how most co-authored research code is organized.
-\end{tcolorbox}
+%\vspace{0.35cm}
+%
+%\begin{tcolorbox}[accentbox]
+%\centering
+%This split is in your assignment already --- it's also how most co-authored research code is organized.
+%\end{tcolorbox}
 
 \end{frame}
 
@@ -380,10 +381,10 @@ gen foodexp\_pc = foodexp\_hh /\\
 \begin{itemize}
   \item Names carry meaning; comments say \textbf{why}, not what
   \item The test: open a file cold --- can you tell what it does in thirty seconds?
-  \item Agents inherit your standards --- messy in, messy out
+%  \item Agents inherit your standards --- messy in, messy out
 \end{itemize}
 
-\aside[6.2cm]{November-you has no memory of August-you. None.}
+%\aside[6.2cm]{November-you has no memory of August-you. None.}
 
 \end{frame}
 
@@ -409,7 +410,7 @@ README.md\\
   \item \textbf{01\_todo.md}: current tasks, priorities, and blockers
   \item \textbf{02\_decisions.md}: the non-obvious choices that future-you will forget
   \item A clean repo with a short explanation is easier to trust than a perfect-looking script with no context
-  \item Good documentation is not extra work; it is part of the research output
+  \item Good documentation is part of the research output and will ultimately save time. But, with agents it is \textbf{essential}
 \end{itemize}
 \end{column}
 \end{columns}
@@ -417,11 +418,10 @@ README.md\\
 \end{frame}
 
 %% ====== 3. GIT ======
-\divider{Git in fifteen minutes}{a lab notebook for your code}
+\divider{Crash course in Github}{you will thank yourself later}
 
-\begin{frame}{Git: Dropbox with perfect version control}
+\begin{frame}{Git: Dropbox with better version control}
 
-You already use the pieces --- Git puts them together, for code:
 
 \vspace{0.15cm}
 
@@ -429,8 +429,8 @@ You already use the pieces --- Git puts them together, for code:
 \begin{column}{0.31\textwidth}
 \begin{tcolorbox}[keybox, title={\faCloud\quad Like Dropbox}]
 \footnotesize
-Your project, backed up and synced\\[4pt]
-But a version saves \textbf{when you say so}, with a label --- and no version ever overwrites another. (No more \texttt{final\_v2\_REAL.do}.)
+Repo = Dropbox folder\\[4pt]
+Version saves \textbf{when you say so}, with a label. Permanent version history. 
 \end{tcolorbox}
 \end{column}
 \begin{column}{0.31\textwidth}
@@ -441,10 +441,11 @@ Accept or reject, same as in Word
 \end{tcolorbox}
 \end{column}
 \begin{column}{0.31\textwidth}
-\begin{tcolorbox}[keybox, title={\faCodeBranch\quad Plus branches}]
+\begin{tcolorbox}[keybox, title={\faCodeBranch\quad Plus ... branches!}]
 \footnotesize
-The genuinely new trick: a \textbf{parallel copy} of the whole project\\[4pt]
-Try the risky idea there; merge it back if it works (delete it quietly if it doesn't)
+Branches create a \textbf{parallel copy} of the whole project\\[4pt]
+Try the risky idea there; merge it back only once it works
+Multiple people can simultaneously edit different branches, merge when ready with no loss of work
 \end{tcolorbox}
 \end{column}
 \end{columns}
@@ -452,27 +453,45 @@ Try the risky idea there; merge it back if it works (delete it quietly if it doe
 \vspace{0.3cm}
 
 \begin{tcolorbox}[accentbox]
-\small This is also how you stay \textbf{in control of an agent}: in a plain folder, its edits just happen --- in Git, they arrive as diffs \textbf{you} review. And it's how every co-authored code base survives. Worth the skill.
+\small Perhaps overkill for solo work (maybe), but so \emph{so} useful with co-authors. Helps when working with agents, too!
 \end{tcolorbox}
 
 \end{frame}
 
-\begin{frame}[fragile]{The whole loop is four commands}
+\begin{frame}[fragile]{The basic Git workflow}
 
-\begin{tcolorbox}[codebox]
-\color{white}\small\ttfamily
-git add .\hspace{2.6em}{\color{CoolGray}stage what changed}\\
-git commit\hspace{1.9em}{\color{CoolGray}snapshot it, with a message}\\
-git push\hspace{3.2em}{\color{CoolGray}back it up to GitHub}\\
-git log\hspace{3.9em}{\color{CoolGray}see the story so far}
-\end{tcolorbox}
+\begin{center}
+\begin{tikzpicture}[
+  workflowstep/.style={rectangle, rounded corners=2pt, draw=SlateTeal, fill=PaleSage,
+                       text=DeepCharcoal, minimum height=1.05cm, minimum width=2.35cm,
+                       align=center, font=\small\bfseries},
+  checkpoint/.style={rectangle, rounded corners=2pt, draw=UVMGold, fill=LightGold,
+                     text=DeepCharcoal, minimum height=1.05cm, minimum width=2.35cm,
+                     align=center, font=\small\bfseries},
+  arrow/.style={-{Stealth[length=5pt]}, line width=0.8pt, draw=SlateTeal}
+]
+  \node[workflowstep] (pull) {Pull\\{\footnotesize get co-authors' changes}};
+  \node[workflowstep, right=0.7cm of pull] (edit) {Edit\\{\footnotesize do the work}};
+  \node[checkpoint, right=0.7cm of edit] (commit) {Commit\\{\footnotesize save a checkpoint}};
+  \node[workflowstep, right=0.7cm of commit] (push) {Push\\{\footnotesize share and back up}};
+  \draw[arrow] (pull) -- (edit);
+  \draw[arrow] (edit) -- (commit);
+  \draw[arrow] (commit) -- (push);
+\end{tikzpicture}
+\end{center}
 
-\vspace{0.3cm}
+\vspace{0.15cm}
+\begin{center}
+\small Repeat whenever you start work, reach a useful checkpoint, or want to share progress.
+\end{center}
+
+\vspace{0.15cm}
 
 \begin{itemize}
+  \item Easy way: Download \textbf{GitHub Desktop} and clone repos. Point and click.
   \item In VS Code, this is the \textbf{Source Control panel} --- type a message, click commit, click sync (navigation guide in the repo)
-  \item Commit \textbf{when a thing works}: after each table, after each cleaning step (not once a month)
-  \item No commands required: \textbf{GitHub Desktop} is a friendly standalone app --- and the \textbf{agent drives Git} happily (``commit this with a sensible message'')
+  \item  Agents use Git happily (i.e., ``commit this with a sensible message'')
+\item Commit when a thing works: after each table, after each cleaning step (not once a month)
 \end{itemize}
 
 \end{frame}
@@ -488,17 +507,16 @@ git log\hspace{3.9em}{\color{CoolGray}see the story so far}
 
 \vspace{0.3cm}
 
-\begin{tcolorbox}[accentbox, width=0.66\textwidth]
-The rhythm: \textbf{checkpoint $\to$ delegate $\to$ read the diff $\to$ keep or discard.} You are never stuck with what the agent did.
-\end{tcolorbox}
+% \begin{tcolorbox}[accentbox, width=0.66\textwidth]
+% The rhythm: \textbf{checkpoint $\to$ delegate $\to$ read the diff $\to$ keep or discard.} You are never stuck with what the agent did.
+% \end{tcolorbox}
 
-\aside[3.6cm]{Discarding isn't defeat --- it's cheaper than repair.}
+% \aside[3.6cm]{Discarding isn't defeat --- it's cheaper than repair.}
 
 \end{frame}
 
-\begin{frame}[fragile]{Reading a diff is a research skill}
-
-What Git shows you when a file changes:
+\begin{frame}[fragile]{What Git shows you when a file changes:
+}
 
 \begin{tcolorbox}[codebox]
 \footnotesize\ttfamily
@@ -518,25 +536,70 @@ What Git shows you when a file changes:
 
 \end{frame}
 
-\begin{frame}{Encouraged, not graded}
+% \begin{frame}{Encouraged, not graded}
 
-\begin{itemize}
-  \item The deal from your syllabus: Git is \textbf{encouraged}, and skipping it costs you nothing on grades
-  \item My pitch anyway: this is the lowest-effort week to start --- empty project, nothing to lose, whole semester to benefit
-  \item Your repo also travels with you --- to Econ 616, your summer paper, your job market code sample
-\end{itemize}
+% \begin{itemize}
+%   \item The deal from your syllabus: Git is \textbf{encouraged}, and skipping it costs you nothing on grades
+%   \item This is the lowest-effort time to start!
+%   % \item Your repo also travels with you --- to Econ 616, your summer paper, your job market code sample
+% \end{itemize}
 
-\vspace{0.4cm}
+% \vspace{0.4cm}
 
-\begin{tcolorbox}[accentbox]
-\centering
-In the repo: \textbf{git cheat sheet} $\cdot$ \textbf{commit message guide} $\cdot$ \textbf{.gitignore} template for econ projects
-\end{tcolorbox}
+% \begin{tcolorbox}[accentbox]
+% \centering
+% In the repo: \textbf{git cheat sheet} $\cdot$ \textbf{commit message guide} $\cdot$ \textbf{.gitignore} template for econ projects
+% \end{tcolorbox}
 
-\end{frame}
+% \end{frame}
 
 %% ====== 4. AI AGENT ======
 \divider{Working with an AI agent}{three rungs of delegation --- and what each one asks of you}
+
+
+%% ====== SLIDE 4: CHAT vs AGENTIC ======
+\begin{frame}{Chat AI vs.\ Agentic AI}
+\begin{columns}[T]
+\begin{column}{0.44\textwidth}
+\begin{tcolorbox}[colback=PaleSage, colframe=CoolGray, boxrule=0.6pt, arc=3pt, left=5pt, right=5pt, top=3pt, bottom=3pt, title={\faComments\quad ChatGPT / Claude Web}, fonttitle=\bfseries\scriptsize, coltitle=DeepCharcoal, colbacktitle=PaleSage!80]
+\centering
+{\scriptsize\color{SoftCoral}\textit{Runs in a sandbox}}
+\vskip4pt
+\begin{itemize}\small\setlength{\itemsep}{1pt}
+  \item Run code snippets
+  \item Generate text
+  \item[\color{SoftCoral}\faTimes] Can't see your files
+  \item[\color{SoftCoral}\faTimes] Can't run commands
+\end{itemize}
+\end{tcolorbox}
+\vskip4pt
+\centering
+{\scriptsize\color{CoolGray} Like \textbf{texting a smart friend} for advice}
+\end{column}
+\begin{column}{0.06\textwidth}
+\centering\vskip1.2cm
+{\large\color{UVMGold}\faArrowRight}
+\end{column}
+\begin{column}{0.44\textwidth}
+\begin{tcolorbox}[colback=LightGold, colframe=UVMGold, boxrule=0.6pt, arc=3pt, left=5pt, right=5pt, top=3pt, bottom=3pt, title={\faTerminal\quad Claude Code / Codex}, fonttitle=\bfseries\scriptsize, coltitle=DeepCharcoal, colbacktitle=LightGold!80]
+\centering
+{\scriptsize\color{SlateTeal}\textit{Runs on your actual computer}}
+\vskip4pt
+\begin{itemize}\small\setlength{\itemsep}{1pt}
+  \item[\color{SlateTeal}\faCheck] Read \& edit your files
+  \item[\color{SlateTeal}\faCheck] Run terminal commands
+  \item[\color{SlateTeal}\faCheck] Access your projects
+  \item[\color{SlateTeal}\faCheck] Install packages
+\end{itemize}
+\end{tcolorbox}
+\vskip4pt
+\centering
+{\scriptsize\color{CoolGray} Like having them \textbf{sit next to you}\\and do the work on your computer}
+\end{column}
+\end{columns}
+\end{frame}
+
+
 
 \begin{frame}{Three rungs of delegation (all inside VS Code)}
 \asof
@@ -671,6 +734,9 @@ An agent, asked to build an analysis dataset, quietly \textbf{imputed missing va
   \item The agent runs Stata itself (batch mode), reads the log, fixes its own error
   \item We read the \textbf{diff} before accepting anything
   \item We catch it making a silent decision --- and log it
+  %% Step-5 talking points: demo_script.md Beat 4 (real Aug 28 example: the
+  %% "two ages over 120" claim in METHODS_NOTES was two *missing* ages; Stata
+  %% treats . > 120 as true). Payoff slide is "Same data, same document, four runs".
   \item Commit. The whole loop, start to finish.
 \end{enumerate}
 
@@ -818,6 +884,68 @@ Read the diff. Always.
 \begin{tcolorbox}[accentbox]
 \centering
 Everything you just watched ran inside one window.
+\end{tcolorbox}
+\end{frame}
+
+\begin{frame}{Same data, same document, four runs}
+\asof
+
+{\scriptsize\hyphenpenalty=10000\exhyphenpenalty=10000
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{2.7cm}>{\raggedright\arraybackslash}p{2.7cm}>{\raggedright\arraybackslash}p{2.7cm}>{\raggedright\arraybackslash}p{2.7cm}@{}}
+\toprule
+ & \textbf{Run 1}: Codex app & \textbf{Run 2}: Codex terminal & \textbf{Run 3}: Claude terminal & \textbf{Run 4}: Codex terminal, \emph{no house rules} \\
+\midrule
+Turns & 8 (plan, detours, figure) & 4 (plan, figure) & 2 (Run 2's prompts) & 3 (Run 2's prompts) \\
+Structure & 5 do-files; 3 tables & 1 do-file; 3 tables & 8 do-files; 7 tables & 3 do-files; 3 tables \\
+Units & household; ages 6--17 & household; roster & household; roster; plot & household; roster \\
+Tool calls & 102 (14 web) & 93 (0 web) & 121 (0 web) & 26 (0 web) \\
+Active time & 16 min build + 2 figure & 9 min build + 10 revise & 21 min build + 10 revise & 3 min build + 4 revise \\
+Ran Stata? & yes & yes, via house rules & yes & \textbf{no} --- checked in R; do-file crashes, r(198) \\
+Overlap & \multicolumn{4}{l}{identical to every digit: $4.291 \to 4.205$ (SE 0.023), 782 PSUs, 32 strata} \\
+\bottomrule
+\end{tabular}}
+
+\begin{itemize}\footnotesize
+  \item No number is wrong. The differences are \textbf{research decisions} nobody was asked about
+  \item Run 1 wrote ``two ages over 120.'' Max is 104; they're \emph{missing} (Stata: missing $>$ 120). Run 3 got it right
+  \item Run 4's workbook and figure came from R; its Stata code was never run --- and doesn't
+\end{itemize}
+
+\begin{tcolorbox}[accentbox]
+\centering
+Three run, one doesn't. What you specify --- and check --- is the part you control.
+\end{tcolorbox}
+
+\end{frame}
+
+\begin{frame}{``Make an interesting figure'': three answers}
+\asof
+\begin{columns}[T]
+\begin{column}{0.32\textwidth}
+\centering
+\includegraphics[width=\columnwidth, height=0.33\textheight, keepaspectratio]{10_run2_pyramid}\\[2pt]
+{\footnotesize Run 2 (Codex): age--sex pyramid}
+\end{column}
+\begin{column}{0.32\textwidth}
+\centering
+\includegraphics[width=\columnwidth, height=0.33\textheight, keepaspectratio]{11_run3_plot_area}\\[2pt]
+{\footnotesize Run 3 (Claude): GPS vs.\ self-report}
+\end{column}
+\begin{column}{0.32\textwidth}
+\centering
+\includegraphics[width=\columnwidth, height=0.33\textheight, keepaspectratio]{12_run4_region_shares}\\[2pt]
+{\footnotesize Run 4 (Codex, no rules): regions}
+\end{column}
+\end{columns}
+\vspace{0.15cm}
+\begin{itemize}\footnotesize
+  \item One describes; one asks a measurement question; one shows what weights \emph{do} (the North: 20\% vs.\ 12\%)
+  \item Run 4's is the best answer to \emph{this} assignment --- drawn by R, because it never found Stata
+\end{itemize}
+\vspace{0.1cm}
+\begin{tcolorbox}[accentbox]
+\centering
+Same five words, three ideas of ``interesting.'' Defining it was my job.
 \end{tcolorbox}
 \end{frame}
 

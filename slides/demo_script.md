@@ -109,6 +109,12 @@ Point to a line in the do-file where Codex quietly did something non-obvious —
 - It used `svy: mean` instead of `mean ... [pweight]` (different variance estimator)
 - It kept only complete cases on all three variables
 
+**Real example from the Aug 28 dry-run (lsms-demo1, Malawi IHS6) — use this if nothing planted shows up:**
+- While inspecting the roster it ran `count if hh_b05a < 0 | hh_b05a > 120` → 2, and wrote "two implausibly high ages, documented rather than changed" into `METHODS_NOTES.md` and `WORKLOG.md`.
+- Max recorded age is 104. The two records are *missing* age — Stata evaluates `. > 120` as true. Same log shows `count if missing(hh_b05a)` → 2 (`logs/inspect_ihs6_values.log:480-484`).
+- The code was fine (`inrange()` handles missing); the *claim* was wrong, and it would have gone straight into a student's write-up. Two independent runs (lsms-demo2: "2 missing ages"; lsms-demo3: "2 persons have an extended-missing age code") disagreed with it — that disagreement is the only reason it was caught. (Verified: 0 system-missing, 2 extended-missing.)
+- Talking point: "It didn't drop anything. It didn't impute anything. It just *said* something false about the data, confidently, in the notes. Read the notes as hard as you read the diff." (Cross-ref: deck page 35.)
+
 **What you say:**
 > "It made a decision. It didn't tell me. If I submit this table, I don't know what's in it."
 
